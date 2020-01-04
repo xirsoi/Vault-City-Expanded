@@ -1,0 +1,62 @@
+ideas = {
+    country = {
+		vault_city_leadership_int = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				intellectuals_drift = 0.10
+			}
+		}
+
+		vault_city_leadership_rul = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				ruler_drift = 0.10
+			}
+		}
+
+		vault_city_leadership_eli = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				elites_drift = 0.10
+			}
+		}
+
+		vault_city_leadership_pop = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				people_drift = 0.10
+			}
+		}
+    }
+}
