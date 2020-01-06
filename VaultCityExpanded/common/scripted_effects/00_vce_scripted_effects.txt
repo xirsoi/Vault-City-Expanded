@@ -1,0 +1,28 @@
+remove_leadership_ideas_effect = {
+    custom_effect_tooltip = remove_leadership_ideas_effect_tt
+    hidden_effect = {
+        remove_ideas = {
+            war_chief1
+            war_chief2
+            elder1
+            elder2
+            elder3
+            high_shaman
+            highchief1
+            highchief2
+            highchief3
+        }
+    }
+}
+
+remove_reno_leadership_ideas_effect = {
+    custom_effect_tooltip = remove_reno_leaders_effect_tt
+    hidden_effect = {
+        remove_ideas = {
+            thefamily
+            salvatores
+            mordinos
+            bishops
+        }
+    }
+}

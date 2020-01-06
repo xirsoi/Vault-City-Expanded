@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
   vault_leadership_int: "Vault City Leadership Training"
   vault_leadership_int_desc: "The leadership of this nation has been given training and advisors from Vault City, bringing their management style more in line with their 'allies' in Vault 8."
   vault_leadership_rul: "Vault City Leadership Training"
@@ -15,3 +15,4 @@ l_english:
   vault_rip_leadership_desc: "With 'Dweller' Masher on our side we can begin aligning the management of Riperult Territory's internal mechanisms with our own. Vault City advisors and education programs will take care of this."
   vault_sho_leadership: "Telling Them On The Mountain"
   vault_sho_leadership_desc: "Make the Shoshone Nation think as we do!"
+  remove_leadership_ideas_effect_tt: "Party Support National Spirits will be removed"
