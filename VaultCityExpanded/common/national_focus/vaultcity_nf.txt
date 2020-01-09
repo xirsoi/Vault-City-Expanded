@@ -158,7 +158,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_tribals
 		}
-		x = 6
+		x = 3
 		y = 1
 		relative_position_id = vault_tribals
 		available = {
@@ -244,7 +244,7 @@ focus_tree = {
 				exists = no
 			}
 		}
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = vault_cyclops
 		completion_reward = {
@@ -316,7 +316,7 @@ focus_tree = {
 				is_puppet_of = VLT
 			}
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_cyclops
 		completion_reward = {
@@ -405,7 +405,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_cyclops_hounds
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_cyclops_hounds
 		completion_reward = {
@@ -444,8 +444,9 @@ focus_tree = {
 		cost = 8.6
 		prerequisite = {
 			focus = vault_cyclops_hounds
+			focus = vault_cyclops_fort
 		}
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = vault_cyclops_hounds
 		available = {
@@ -613,8 +614,8 @@ focus_tree = {
 			focus = vault_cyclops_hounds
 			focus = vault_cyclops_fort
 		}
-		x = -1
-		y = 1
+		x = 2
+		y = 2
 		available = {
 			hidden_trigger = {
 				if = {
@@ -661,7 +662,7 @@ focus_tree = {
 			}
 		}
 		will_lead_to_war_with = SHO
-		relative_position_id = vault_cyclops_hounds
+		relative_position_id = vault_cyclops_fort
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -698,7 +699,7 @@ focus_tree = {
 				is_puppet_of = VLT
 			}
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_shoshone
 		completion_reward = {
@@ -780,7 +781,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_sho_puppet
 		}
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = vault_shoshone
 		completion_reward = {
@@ -882,6 +883,7 @@ focus_tree = {
 		cost = 8.6
 		prerequisite = {
 			focus = vault_sho_pop
+			focus = vault_sho_bonus
 		}
 		x = 1
 		y = 1
@@ -960,6 +962,7 @@ focus_tree = {
 		cost = 8.6
 		prerequisite = {
 			focus = vault_dancers
+			focus = vault_sho_bonus
 		}
 		available = {
 			BDT = {
@@ -969,7 +972,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_feed_sho
 		}
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = vault_dancers
 		completion_reward = {
@@ -1006,7 +1009,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_dancers_core
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = vault_dancers
 		completion_reward = {
@@ -1049,7 +1052,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_tribals
 		}
-		x = -7
+		x = -3
 		y = 1
 		relative_position_id = vault_tribals
 		available = {
@@ -1123,6 +1126,80 @@ focus_tree = {
 	}
 
 	focus = {
+		id = vault_flock_annex
+		icon = GFX_goal_VLT_flock_core
+		cost = 8.6
+		prerequisite = {
+			focus = vault_flock
+		}
+		mutually_exclusive = {
+			focus = vault_flock_goggles
+		}
+		x = 1
+		y = 1
+		relative_position_id = vault_flock
+		available = {
+			PAL = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_flock_annex entered"
+			}
+			every_state = {
+				limit = {
+					is_core_of = PAL
+				}
+				add_core_of = ROOT
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_flock_annex exited"
+			}
+		}
+	}
+
+	focus = {
+		id = vault_flock_filters
+		icon = GFX_goal_generic_food_focus
+		cost = 8.6
+		prerequisite = {
+			focus = vault_flock_annex
+		}
+		available = {
+			223 = { is_owned_and_controlled_by = ROOT }
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_flock_annex
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_flock_filters entered"
+			}
+			add_resource = {
+				type = water
+				amount = 10
+				state = 223
+			}
+			223 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_flock_filters exited"
+			}
+		}
+	}
+
+	focus = {
 		id = vault_flock_goggles
 		icon = GFX_goal_generic_air_doctrines_focus
 		cost = 8.6
@@ -1137,7 +1214,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_flock_annex
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_flock
 		completion_reward = {
@@ -1193,7 +1270,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_flock_diagnose
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_flock_diagnose
 		completion_reward = {
@@ -1232,8 +1309,9 @@ focus_tree = {
 		cost = 8.6
 		prerequisite = {
 			focus = vault_flock_diagnose
+			focus = vault_flock_filters
 		}
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = vault_flock_diagnose
 		available = {
@@ -1309,9 +1387,8 @@ focus_tree = {
 		id = vault_east_port_core
 		icon = GFX_goal_VLT_flock_core
 		cost = 8.6
-		prerequisite = {
-			focus = vault_east_port
-		}
+		prerequisite = { focus = vault_east_port }
+		prerequisite = { focus = vault_flock_filters }
 		available = {
 			EAS = {
 				exists = no
@@ -1392,80 +1469,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = vault_flock_annex
-		icon = GFX_goal_VLT_flock_core
-		cost = 8.6
-		prerequisite = {
-			focus = vault_flock
-		}
-		mutually_exclusive = {
-			focus = vault_flock_goggles
-		}
-		x = -1
-		y = 1
-		relative_position_id = vault_flock
-		available = {
-			PAL = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_flock_annex entered"
-			}
-			every_state = {
-				limit = {
-					is_core_of = PAL
-				}
-				add_core_of = ROOT
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_flock_annex exited"
-			}
-		}
-	}
-
-	focus = {
-		id = vault_flock_filters
-		icon = GFX_goal_generic_food_focus
-		cost = 8.6
-		prerequisite = {
-			focus = vault_flock_annex
-		}
-		available = {
-			223 = { is_owned_and_controlled_by = ROOT }
-		}
-		x = 0
-		y = 1
-		relative_position_id = vault_flock_annex
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_flock_filters entered"
-			}
-			add_resource = {
-				type = water
-				amount = 10
-				state = 223
-			}
-			223 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_flock_filters exited"
-			}
-		}
-	}
-
 	#Riperult
 
 	focus = {
@@ -1476,9 +1479,9 @@ focus_tree = {
 			focus = vault_flock_diagnose
 			focus = vault_flock_filters
 		}
-		x = -1
-		y = 1
-		relative_position_id = vault_flock_diagnose
+		x = 2
+		y = 2
+		relative_position_id = vault_flock_filters
 		available = {
 			hidden_trigger = {
 				if = {
@@ -1561,7 +1564,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_rip_crescent
 		}
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = vault_riperult
 		completion_reward = {
@@ -1629,6 +1632,70 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = vault_rip_crescent
+		icon = GFX_goal_VLT_rip_core
+		cost = 8.6
+		prerequisite = {
+			focus = vault_riperult
+		}
+		available = {
+			RIP = {
+				exists = no
+			}
+		}
+		mutually_exclusive = {
+			focus = vault_rip_puppet
+		}
+		x = 1
+		y = 1
+		relative_position_id = vault_riperult
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_rip_crescent entered"
+			}
+			every_state = {
+				limit = {
+					is_core_of = RIP
+				}
+				add_core_of = ROOT
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_rip_crescent exited"
+			}
+		}
+	}
+	focus = {
+		id = vault_rip_water
+		icon = GFX_goal_anschluss
+		cost = 8.6
+		prerequisite = {
+			focus = vault_rip_crescent
+		}
+		available = {
+			462 = { is_owned_and_controlled_by = ROOT }
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_rip_crescent
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_rip_water entered"
+			}
+			add_resource = {
+				type = water
+				amount = 8
+				state = 462
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_rip_water exited"
+			}
+		}
+	}
+	focus = {
 		id = vault_rip_leadership
 		icon = GFX_goal_generic_recruitment_focus
 		cost = 8.6
@@ -1673,6 +1740,7 @@ focus_tree = {
 		cost = 8.6
 		prerequisite = {
 			focus = vault_rip_pop
+			focus = vault_rip_water
 		}
 		x = 1
 		y = 1
@@ -1749,9 +1817,8 @@ focus_tree = {
 		id = vault_ruby_core
 		icon = GFX_goal_VLT_rip_core
 		cost = 8.6
-		prerequisite = {
-			focus = vault_ruby
-		}
+		prerequisite = { focus = vault_ruby	}
+		prerequisite = { focus = vault_rip_water }
 		available = {
 			RUB = {
 				exists = no
@@ -1760,7 +1827,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_feed_rip
 		}
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = vault_ruby
 		completion_reward = {
@@ -1797,7 +1864,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = vault_ruby_core
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = vault_ruby
 		completion_reward = {
@@ -1831,70 +1898,6 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = vault_rip_crescent
-		icon = GFX_goal_VLT_rip_core
-		cost = 8.6
-		prerequisite = {
-			focus = vault_riperult
-		}
-		available = {
-			RIP = {
-				exists = no
-			}
-		}
-		mutually_exclusive = {
-			focus = vault_rip_puppet
-		}
-		x = -1
-		y = 1
-		relative_position_id = vault_riperult
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_rip_crescent entered"
-			}
-			every_state = {
-				limit = {
-					is_core_of = RIP
-				}
-				add_core_of = ROOT
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_rip_crescent exited"
-			}
-		}
-	}
-	focus = {
-		id = vault_rip_water
-		icon = GFX_goal_anschluss
-		cost = 8.6
-		prerequisite = {
-			focus = vault_rip_crescent
-		}
-		available = {
-			462 = { is_owned_and_controlled_by = ROOT }
-		}
-		x = 0
-		y = 1
-		relative_position_id = vault_rip_crescent
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_rip_water entered"
-			}
-			add_resource = {
-				type = water
-				amount = 8
-				state = 462
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_rip_water exited"
-			}
-		}
-	}
 
   #Yakuza
 	focus = {
@@ -1904,7 +1907,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_tribals
 		}
-		x = 1
+		x = 10
 		y = 1
 		relative_position_id = vault_tribals
 		available = {
