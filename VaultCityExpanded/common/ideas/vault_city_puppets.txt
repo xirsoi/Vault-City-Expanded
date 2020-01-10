@@ -124,5 +124,20 @@ ideas = {
 				conscription = 0.05
 			}
 		}
+
+		vault_city_den_crackdown = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				conscription = 0.03
+			}
+		}
     }
 }
