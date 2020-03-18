@@ -1,0 +1,21 @@
+vault_federation_exists = {
+  custom_trigger_tooltip = {
+    tooltip = vault_federation_exists_tt
+    any_country = {
+      is_vault_federation_member = yes
+      is_faction_leader = yes
+    }
+  }
+}
+
+is_vault_federation_member = {
+  custom_trigger_tooltip = {
+    tooltip = is_vault_federation_member_tt
+    has_variable = current_faction
+    check_variable = {
+      var     = current_faction
+      value   = "VFD"
+      compare = equals
+    }
+  }
+}

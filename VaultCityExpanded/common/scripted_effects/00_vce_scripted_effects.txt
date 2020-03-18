@@ -26,3 +26,158 @@ remove_reno_leadership_ideas_effect = {
         }
     }
 }
+
+create_or_join_vault_federation = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_vault_federation (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			vault_federation_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = VAULT_FEDERATION
+		mark_as_vault_federation_member = yes
+		set_variable = { GLOBAL.vault_federation_leader = THIS }
+	}
+	else_if = {
+		join_vault_federation = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_vault_federation (scripted_effect) exited"
+	}
+}
+
+mark_as_vault_federation_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_vault_federation_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_vault_federation_member = no }
+		set_variable = { current_faction = VFD }
+		add_vault_federation_ally_strategies = yes
+		#add_boneyard_brotherhood_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_vault_federation_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_vault_federation_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_vault_federation_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_vault_federation_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_vault_federation_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_vault_federation_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_vault_federation_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_vault_federation_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_vault_federation_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_vault_federation_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_vault_federation_ally_strategies (scripted_effect) exited"
+	}
+}
+
+join_vault_federation = {
+	custom_effect_tooltip = join_vault_federation_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_vault_federation (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_vault_federation_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.vault_federation_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_vault_federation - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				#PREV = { news_event = { id = vault_federation_faction_events.4 } }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_vault_federation - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_vault_federation_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_vault_federation (scripted_effect) exited"
+		}
+	}
+}

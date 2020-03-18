@@ -161,6 +161,9 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = vault_tribals
+		bypass = {
+			CYC = { all_core_land_owned_by_prev_sphere = yes }
+		}
 		available = {
 			hidden_trigger = {
 				if = {
@@ -169,38 +172,6 @@ focus_tree = {
 					NOT = {
 						any_country = {
 							ROOT = { has_wargoal_against = PREV }
-						}
-					}
-				}
-			}
-		}
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = CYC
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = CYC
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = CYC
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = CYC
-							is_owned_and_controlled_by = THIS
 						}
 					}
 				}
@@ -463,36 +434,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = CHE
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = CHE
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = CHE
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = CHE
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			CHE = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = CHE
 		completion_reward = {
@@ -521,9 +463,8 @@ focus_tree = {
 		id = vault_chemult_core
 		icon = GFX_goal_VLT_cyclops_core
 		cost = 8.6
-		prerequisite = {
-			focus = vault_chemult
-		}
+		prerequisite = { focus = vault_chemult }
+		prerequisite = { focus = vault_cyclops_fort }
 		available = {
 			CHE = {
 				exists = no
@@ -630,36 +571,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								check_variable = { original_owner = SHO.id }
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							check_variable = { original_owner = SHO.id }
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								check_variable = { original_owner = SHO.id }
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							check_variable = { original_owner = SHO.id }
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			SHO = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = SHO
 		relative_position_id = vault_cyclops_fort
@@ -877,6 +789,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = vault_dancers
 		icon = GFX_goal_VLT_cyc_war_dec
@@ -902,36 +815,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = BDT
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = BDT
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = BDT
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = BDT
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			BDT = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = BDT
 		completion_reward = {
@@ -960,10 +844,8 @@ focus_tree = {
 		id = vault_dancers_core
 		icon = GFX_goal_VLT_sho_core
 		cost = 8.6
-		prerequisite = {
-			focus = vault_dancers
-			focus = vault_sho_bonus
-		}
+		prerequisite = { focus = vault_dancers }
+		prerequisite = { focus = vault_sho_bonus }
 		available = {
 			BDT = {
 				exists = no
@@ -1069,36 +951,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = PAL
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = PAL
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = PAL
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = PAL
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			PAL = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = PAL
 		completion_reward = {
@@ -1225,7 +1078,7 @@ focus_tree = {
 			PAL = {
 				swap_ideas = {
 					remove_idea = pale_folk_photophobia
-					add_ideas = pale_folk_photophobia_goggles
+					add_idea = pale_folk_photophobia_goggles
 				}
 			}
 			if = {
@@ -1328,36 +1181,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = EAS
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = EAS
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = EAS
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = EAS
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			EAS = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = EAS
 		completion_reward = {
@@ -1495,36 +1319,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								check_variable = { original_owner = RIP.id }
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							check_variable = { original_owner = RIP.id }
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								check_variable = { original_owner = RIP.id }
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							check_variable = { original_owner = RIP.id }
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			RIP = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = RIP
 		completion_reward = {
@@ -1758,36 +1553,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = RUB
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = RUB
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = RUB
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = RUB
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			RUB = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = RUB
 		completion_reward = {
@@ -1923,36 +1689,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = YKZ
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = YKZ
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = YKZ
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = YKZ
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			YKZ = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = YKZ
 		completion_reward = {
@@ -2171,36 +1908,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = NEW
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = NEW
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = NEW
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = NEW
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			NEW = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = NEW
 		completion_reward = {
@@ -2426,36 +2134,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = ANT
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = ANT
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = ANT
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = ANT
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			ANT = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = ANT
 		completion_reward = {
@@ -2551,11 +2230,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_resource = {
-				type = water
-				amount = 8
-				state = 585
-			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_antelope_factories exited"
@@ -2585,8 +2259,10 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_antelope_slags entered"
 			}
-			ANT = {
-				add_ideas = vault_city_antelope_slags
+			add_resource = {
+				type = water
+				amount = 8
+				state = 585
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2610,7 +2286,7 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] vault_antelope_militia entered"
 			}
 			ANT = {
-				add_ideas = vault_city_antelope_militia
+				add_idea = vault_city_antelope_militia
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2685,36 +2361,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = own_all_core_states_of_war_nation_tt
-				OR = {
-					AND = {
-						NOT = {
-							any_state = {
-								is_core_of = KLA
-								NOT = { is_owned_and_controlled_by = ROOT }
-							}
-						}
-						any_state = {
-							is_core_of = KLA
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-					any_other_country = {
-						is_subject_of = ROOT
-						NOT = {
-							any_state = {
-								is_core_of = KLA
-								NOT = { is_owned_and_controlled_by = THIS }
-							}
-						}
-						any_state = {
-							is_core_of = KLA
-							is_owned_and_controlled_by = THIS
-						}
-					}
-				}
-			}
+			KLA = { all_core_land_owned_by_prev_sphere = yes }
 		}
 		will_lead_to_war_with = KLA
 		completion_reward = {
@@ -2808,7 +2455,7 @@ focus_tree = {
 		icon = GFX_goal_generic_common_firearms_focus
 		cost = 8.6
 		prerequisite = {
-			focus = vault_vault_klamath
+			focus = vault_klamath
 		}
 		mutually_exclusive = {
 			focus = vault_klamath_serve
@@ -2844,7 +2491,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = vault_reno_runners
+		relative_position_id = vault_klamath_den
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2871,7 +2518,7 @@ focus_tree = {
 		icon = GFX_goal_generic_recruitment_focus
 		cost = 8.6
 		prerequisite = {
-			focus = vault_reno_gangs
+			focus = vault_klamath_bos_outpost
 		}
 		x = -1
 		y = 1
@@ -4168,6 +3815,166 @@ focus_tree = {
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_gem exited"
+			}
+		}
+	}
+
+	focus = {
+		id = vault_enemies_of_enemies
+		icon = GFX_goal_generic_NCR_diplomatic_focus
+		cost = 8.6
+		prerequisite = {
+			focus = vault_first_4a
+			focus = vault_first_4b
+			focus = vault_cheif_4a
+			focus = vault_chief_4b
+			focus = vault_festus_4a
+			focus = vault_festus_4b
+		}
+		x = -2
+		y = 1
+		relative_position_id = vault_cheif_4a
+		mutually_exclusive = {
+			focus = vault_brotherhood_pact_of_steel
+			focus = vault_something_greater
+			focus = vault_our_own_way
+		}
+		available = {
+			has_war = no
+			is_in_faction = no
+			any_neighbor_country = {
+				is_ncr_member = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+			}
+			create_or_join_ncr = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
+			}
+		}
+	}
+
+	focus = {
+		id = vault_brotherhood_pact_of_steel
+		icon = GFX_goal_BOS_common_ground_with_savages
+		cost = 8.6
+		prerequisite = {
+			focus = vault_first_4a
+			focus = vault_first_4b
+			focus = vault_cheif_4a
+			focus = vault_chief_4b
+			focus = vault_festus_4a
+			focus = vault_festus_4b
+		}
+		mutually_exclusive = {
+			focus = vault_enemies_of_enemies
+			focus = vault_something_greater
+			focus = vault_our_own_way
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_cheif_4a
+		available = {
+			has_war = no
+			is_in_faction = no
+			any_neighbor_country = {
+				is_brotherhood_of_steel_member = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+			}
+			create_or_join_brotherhood_of_steel = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
+			}
+		}
+	}
+
+	focus = {
+		id = vault_something_greater
+		icon = GFX_goal_generic_nevada_pact
+		cost = 8.6
+		prerequisite = {
+			focus = vault_first_4a
+			focus = vault_first_4b
+			focus = vault_cheif_4a
+			focus = vault_chief_4b
+			focus = vault_festus_4a
+			focus = vault_festus_4b
+		}
+		mutually_exclusive = {
+			focus = vault_enemies_of_enemies
+			focus = vault_brotherhood_pact_of_steel
+			focus = vault_our_own_way
+		}
+		x = 2
+		y = 1
+		relative_position_id = vault_cheif_4a
+		available = {
+			has_war = no
+			is_in_faction = no
+			any_neighbor_country = {
+				is_nevada_pact_member = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+			}
+			create_or_join_nevada_pact = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
+			}
+		}
+	}
+
+	focus = {
+		id = vault_our_own_way
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8.6
+		prerequisite = {
+			focus = vault_first_4a
+			focus = vault_first_4b
+			focus = vault_cheif_4a
+			focus = vault_chief_4b
+			focus = vault_festus_4a
+			focus = vault_festus_4b
+		}
+		mutually_exclusive = {
+			focus = vault_enemies_of_enemies
+			focus = vault_brotherhood_pact_of_steel
+			focus = vault_something_greater
+		}
+		x = 4
+		y = 1
+		relative_position_id = vault_cheif_4a
+		available = {
+			has_war = no
+			is_in_faction = no
+			any_other_country = {
+				is_puppet_of = ROOT
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+			}
+			create_faction = VAULT_FEDERATION
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
 			}
 		}
 	}

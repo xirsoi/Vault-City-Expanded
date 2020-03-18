@@ -139,5 +139,19 @@ ideas = {
 				conscription = 0.03
 			}
 		}
+
+		vault_city_antelope_militia = {
+			picture = vault_open_bonus
+			allowed = {
+				is_puppet_of = VLT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+			}
+		}
     }
 }
