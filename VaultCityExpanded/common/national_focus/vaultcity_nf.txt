@@ -368,7 +368,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_cyclops_leadership
 		icon = GFX_goal_generic_recruitment_focus
@@ -409,9 +408,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = vault_chemult
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_cyclops_hounds
@@ -461,7 +461,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_chemult_core
-		icon = GFX_goal_VLT_cyclops_core
+		icon = GFX_goal_VLT_cyc_core
 		cost = 8.6
 		prerequisite = { focus = vault_chemult }
 		prerequisite = { focus = vault_cyclops_fort }
@@ -495,7 +495,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_feed_cyclops
-		icon = GFX_goal_VLT_cyclops_core
+		icon = GFX_goal_VLT_cyc_war_dec
 		cost = 8.6
 		prerequisite = { focus = vault_chemult }
 		prerequisite = { focus = vault_cyclops_leadership } 
@@ -656,7 +656,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_sho_pop
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_generic_recruitment_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_sho_puppet
@@ -715,7 +715,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_sho_bonus
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_generic_airbases_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_sho_core
@@ -792,7 +792,7 @@ focus_tree = {
 
 	focus = {
 		id = vault_dancers
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_sho_pop
@@ -842,7 +842,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_dancers_core
-		icon = GFX_goal_VLT_sho_core
+		icon = GFX_goal_VLT_shoshone_core
 		cost = 8.6
 		prerequisite = { focus = vault_dancers }
 		prerequisite = { focus = vault_sho_bonus }
@@ -876,7 +876,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_feed_sho
-		icon = GFX_goal_VLT_sho_core
+		icon = GFX_goal_VLT_shoshone_war_dec
 		cost = 8.6
 		prerequisite = { focus = vault_dancers }
 		prerequisite = { focus = vault_sho_leadership }
@@ -977,7 +977,6 @@ focus_tree = {
 		}
 
 	}
-
 	focus = {
 		id = vault_flock_annex
 		icon = GFX_goal_VLT_flock_core
@@ -1013,7 +1012,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_flock_filters
 		icon = GFX_goal_generic_food_focus
@@ -1051,7 +1049,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_flock_goggles
 		icon = GFX_goal_generic_air_doctrines_focus
@@ -1087,7 +1084,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_flock_diagnose
 		icon = GFX_focus_research
@@ -1115,7 +1111,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_flock_leadership
 		icon = GFX_goal_generic_recruitment_focus
@@ -1158,7 +1153,7 @@ focus_tree = {
 
 	focus = {
 		id = vault_east_port
-		icon = GFX_goal_VLT_flock_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_flock_diagnose
@@ -1206,7 +1201,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_east_port_core
 		icon = GFX_goal_VLT_flock_core
@@ -1345,7 +1339,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_rip_puppet
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_generic_generic_diplomatic_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_riperult
@@ -1403,7 +1397,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_rip_pop
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_generic_recruitment_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_rip_puppet
@@ -1462,7 +1456,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_rip_water
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_water_generic
 		cost = 8.6
 		prerequisite = {
 			focus = vault_rip_crescent
@@ -1528,9 +1522,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = vault_ruby
-		icon = GFX_goal_VLT_rip_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_rip_pop
@@ -1614,7 +1609,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_feed_rip
-		icon = GFX_goal_VLT_rip_core
+		icon = GFX_goal_VLT_rip_war_dec
 		cost = 8.6
 		prerequisite = { focus = vault_ruby }
 		prerequisite = { focus = vault_rip_leadership }
@@ -1667,7 +1662,7 @@ focus_tree = {
   #Yakuza
 	focus = {
 		id = vault_yakuza
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_war_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_tribals
@@ -1716,7 +1711,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_yakuza_serve
-		icon = GFX_goal_VLT_cyc_core
+		icon = GFX_goal_generic_position_armies
 		cost = 8.6
 		prerequisite = {
 			focus = vault_yakuza
@@ -1808,8 +1803,11 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_yakuza_agents entered"
 			}
+			load_oob = vault_yakuza_clans
+			add_ideas = vault_yakuza_agents
 			YKZ = {
 				add_ideas = vault_city_yakuza_agents
+				load_oob = yakuza_yakuza_clans
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -1819,7 +1817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_yakuza_artists
-		icon = GFX_goal_generic_recruitment_focus
+		icon = GFX_goal_ncr_ranger_core
 		cost = 8.6
 		prerequisite = {
 			focus = vault_yakuza_agents
@@ -1882,10 +1880,10 @@ focus_tree = {
 		}
 	}
 
-	#Reno
+  #Reno
 	focus = {
 		id = vault_reno
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_war_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_yakuza_artists
@@ -1935,7 +1933,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_reno_serve
-		icon = GFX_goal_VLT_cyc_core
+		icon = GFX_goal_anschluss
 		cost = 8.6
 		prerequisite = {
 			focus = vault_reno
@@ -1970,7 +1968,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_reno_roads
-		icon = GFX_goal_generic_roads_focus
+		icon = GFX_goal_generic_infrastructure
 		cost = 8.6
 		prerequisite = {
 			focus = vault_reno_serve
@@ -2112,7 +2110,7 @@ focus_tree = {
   #Antelope Tribe
 	focus = {
 		id = vault_antelope
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_tribals
@@ -2161,7 +2159,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_antelope_serve
-		icon = GFX_goal_VLT_cyc_core
+		icon = GFX_goal_anschluss
 		cost = 8.6
 		prerequisite = {
 			focus = vault_antelope
@@ -2196,7 +2194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_antelope_factories
-		icon = GFX_goal_generic_factory_focus
+		icon = GFX_goal_generic_large_scale_normal_industry_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_antelope_serve
@@ -2238,7 +2236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_antelope_slags
-		icon = GFX_goal_generic_common_firearms_focus
+		icon = GFX_goal_water_generic
 		cost = 8.6
 		prerequisite = {
 			focus = vault_antelope
@@ -2272,7 +2270,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_antelope_militia
-		icon = GFX_goal_generic_recruitment_focus
+		icon = GFX_goal_generic_common_firearms_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_antelope_slags
@@ -2335,10 +2333,10 @@ focus_tree = {
 		}
 	}
 
-	#Klamath
+  #Klamath
 	focus = {
 		id = vault_klamath
-		icon = GFX_goal_VLT_cyc_war_dec
+		icon = GFX_goal_generic_major_war
 		cost = 8.6
 		prerequisite = {
 			focus = vault_antelope_factories
@@ -2388,7 +2386,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_klamath_serve
-		icon = GFX_goal_VLT_cyc_core
+		icon = GFX_goal_generic_generic_diplomatic_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_klamath
@@ -2423,7 +2421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_klamath_river
-		icon = GFX_goal_generic_roads_focus
+		icon = GFX_goal_water_generic
 		cost = 8.6
 		prerequisite = {
 			focus = vault_klamath_serve
@@ -2484,7 +2482,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_klamath_bos_outpost
-		icon = GFX_goal_generic_recruitment_focus
+		icon = GFX_goal_BOS_vertibird_schematics
 		cost = 8.6
 		prerequisite = {
 			focus = vault_klamath_den
@@ -2515,7 +2513,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_klamath_leadership
-		icon = GFX_goal_generic_recruitment_focus
+		icon = GFX_goal_generic_generic_diplomatic_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_klamath_bos_outpost
@@ -2554,8 +2552,7 @@ focus_tree = {
 		}
 	}
 
-	#brain
-
+  #brain
 	focus = {
 		id = vault_brain_1
 		text = vault_brain_1
@@ -2690,7 +2687,7 @@ focus_tree = {
 		}
 	}
 
-	#first
+  #first
 	focus = {
 		id = vault_first_1
 		text = vault_first_1
@@ -2741,7 +2738,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = utopia
-				add_ideas = firstutopia
+				add_idea = firstutopia
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2847,7 +2844,7 @@ focus_tree = {
 		}
 	}
 
-	#chief
+  #chief
 	focus = {
 		id = vault_chief_1
 		text = vault_chief_1
@@ -2982,7 +2979,7 @@ focus_tree = {
 		}
 	}
 
-	#festus
+  #festus
 	focus = {
 		id = vault_festus_1
 		text = vault_festus_1
@@ -3135,6 +3132,7 @@ focus_tree = {
 		}
 	}
 
+  #industry/civil development
 	focus = {
 		id = vault_utopia
 		icon = GFX_goal_generic_cities_focus
@@ -3563,6 +3561,8 @@ focus_tree = {
 			}
 		}
 	}
+
+  #security
 	focus = {
 		id = vault_sec
 		text = vault_sec
@@ -3819,6 +3819,8 @@ focus_tree = {
 		}
 	}
 
+
+  #factions
 	focus = {
 		id = vault_enemies_of_enemies
 		icon = GFX_goal_generic_NCR_diplomatic_focus
@@ -3858,7 +3860,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_brotherhood_pact_of_steel
 		icon = GFX_goal_BOS_common_ground_with_savages
@@ -3898,7 +3899,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_something_greater
 		icon = GFX_goal_generic_nevada_pact
@@ -3938,7 +3938,6 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = vault_our_own_way
 		icon = GFX_goal_generic_forceful_treaty
@@ -3971,7 +3970,7 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
 			}
-			create_faction = VAULT_FEDERATION
+			create_or_join_vault_federation = yes
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"

@@ -1,0 +1,431 @@
+scripted_diplomatic_actions = {
+	ask_to_join_vault_federation = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			ROOT = { allowed_to_join_factions = yes }
+			is_vault_federation_leader = yes
+		}
+		selectable = {
+			ROOT = {
+        can_join_vault_federation = yes
+			}
+		}
+
+		cost = 25
+		requires_acceptance = yes
+
+		send_description = ASK_TO_JOIN_vault_federation_SEND_DESC
+		accept_title = ASK_TO_JOIN_vault_federation_ACCEPT
+		accept_description = ASK_TO_JOIN_vault_federation_ACCEPT_DESC
+		reject_title = ASK_TO_JOIN_vault_federation_REJECT
+		reject_description = ASK_TO_JOIN_vault_federation_REJECT_DESC
+
+		on_sent_effect = {
+		}
+
+		reject_effect = {
+			ROOT = {
+				every_country = {
+					limit = { is_vault_federation_member = yes }
+					ROOT = {
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = refused_entry_to_vault_federation
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = refused_entry_to_vault_federation
+						}
+					}
+				}
+				if = {
+					limit = { has_idea = refused_entry_to_vault_federation }
+					modify_timed_idea = {
+						idea = refused_entry_to_vault_federation
+						days = 90
+					}
+				}
+				else = {
+					add_timed_idea = {
+						idea = refused_entry_to_vault_federation
+						days = 90
+					}
+				}
+				news_event = { id = vault_federation_faction_events.3 }
+			}
+		}
+
+		complete_effect = {
+			ROOT = { join_vault_federation = yes }
+		}
+
+		ai_acceptance = {
+			ai_reason_opinion = {
+				base = 0
+				modifier = {
+					add = opinion@ROOT
+				}
+			}
+			ai_reason_surrender_progress = {
+				base = 100
+				modifier = {
+					factor = surrender_progress
+				}
+			}
+			ai_reason_wants_ally = {
+				base = 0
+				modifier = {
+					add = -100
+					check_variable = { ai_attitude_wants_ally = 0 }
+				}
+			}
+			ai_reason_enemy_exposure = {
+				base = 100
+				modifier = {
+					set_temp_variable = { alliance_battalion_count = num_battalions }
+					all_of_scopes = {
+						array = allies
+						add_to_temp_variable = { alliance_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { new_alliance_battalion_count = alliance_battalion_count }
+					add_to_temp_variable = { new_alliance_battalion_count = ROOT.num_battalions }
+					all_of_scopes = {
+						array = ROOT.subjects
+						add_to_temp_variable = { new_alliance_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { current_enemies_battalion_count = 0 }
+					all_of_scopes = {
+						array = enemies
+						add_to_temp_variable = { current_enemies_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { new_enemies_battalion_count = 0 }
+					all_country = {
+						if = {
+							limit = {
+								OR = {
+									has_war_with = ROOT
+									has_war_with = PREV
+								}
+							}
+							add_to_temp_variable = { new_enemies_battalion_count = num_battalions }
+						}
+					}
+
+					set_temp_variable = { current_ratio = current_enemies_battalion_count }
+					divide_temp_variable = { current_ratio = alliance_battalion_count }
+
+					set_temp_variable = { new_ratio = new_enemies_battalion_count }
+					divide_temp_variable = { new_ratio = new_alliance_battalion_count }
+
+					set_temp_variable = { ratio_diff = current_ratio }
+					subtract_from_temp_variable = { ratio_diff = new_ratio }
+					clamp_temp_variable = {
+						var = ratio_diff
+						min = -1
+						max = 1
+					}
+
+					factor = ratio_diff
+				}
+			}
+			ai_reason_world_tension = {
+				base = -100
+				modifier = {
+					set_temp_variable = { threat_add = 100 }
+					multiply_temp_variable = { threat_add = GLOBAL.threat }
+					add = threat_add
+				}
+			}
+		}
+
+		ai_desire = {
+			base = 0
+			modifier = {
+				set_temp_variable = { op_add = ROOT.opinion@THIS }
+				#multiply_temp_variable = { op_add = 2 }
+				add = op_add
+				check_variable = { ROOT.ai_attitude_wants_ally = 1 }
+			}
+			modifier = {
+				set_temp_variable = { cap_factor = ROOT.surrender_progress }
+				add_to_temp_variable = { cap_factor = 1 }
+				factor = cap_factor
+			}
+			modifier = {
+				factor = GLOBAL.threat
+			}
+			modifier = {
+				factor = 0
+				ROOT = { has_idea = refused_entry_to_vault_federation }
+			}
+			modifier = {
+				set_temp_variable = { alliance_battalion_count = num_battalions }
+				all_of_scopes = {
+					array = subjects
+					add_to_temp_variable = { alliance_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { new_alliance_battalion_count = alliance_battalion_count }
+				add_to_temp_variable = { new_alliance_battalion_count = ROOT.num_battalions }
+				all_of_scopes = {
+					array = ROOT.allies
+					add_to_temp_variable = { new_alliance_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { current_enemies_battalion_count = 0 }
+				all_of_scopes = {
+					array = enemies
+					add_to_temp_variable = { current_enemies_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { new_enemies_battalion_count = 0 }
+				all_country = {
+					if = {
+						limit = {
+							OR = {
+								has_war_with = ROOT
+								has_war_with = PREV
+							}
+						}
+						add_to_temp_variable = { new_enemies_battalion_count = num_battalions }
+					}
+				}
+
+				set_temp_variable = { current_ratio = current_enemies_battalion_count }
+				divide_temp_variable = { current_ratio = alliance_battalion_count }
+
+				set_temp_variable = { new_ratio = new_enemies_battalion_count }
+				divide_temp_variable = { new_ratio = new_alliance_battalion_count }
+
+				set_temp_variable = { ratio_diff = current_ratio }
+				subtract_from_temp_variable = { ratio_diff = new_ratio }
+
+				clamp_temp_variable = {
+					var = ratio_diff
+					min = 0
+				}
+
+				factor = ratio_diff
+			}
+		}
+	}
+	invite_to_join_vault_federation = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			ROOT = { is_vault_federation_leader = yes }
+			allowed_to_join_factions = yes
+			at_peace_with_vault_federation = yes
+		}
+		selectable = {
+      can_join_vault_federation = yes
+		}
+
+		requires_acceptance = yes
+		cost = 25
+
+		send_description = INVITE_TO_JOIN_vault_federation_SEND_DESC
+		accept_title = INVITE_TO_JOIN_vault_federation_ACCEPT
+		accept_description = INVITE_TO_JOIN_vault_federation_ACCEPT_DESC
+		reject_title = INVITE_TO_JOIN_vault_federation_REJECT
+		reject_description = INVITE_TO_JOIN_vault_federation_REJECT_DESC
+
+		on_sent_effect = {
+		}
+
+		reject_effect = {
+			if = {
+				limit = {
+					NOT = { has_opinion_modifier = rejected_invitation_to_vault_federation }
+				}
+				every_country = {
+					limit = { is_vault_federation_member = yes }
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = rejected_invitation_to_vault_federation
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = rejected_invitation_to_vault_federation
+					}
+				}
+				if = {
+					limit = { has_idea = rejected_invitation_to_vault_federation }
+					modify_timed_idea = {
+						idea = rejected_invitation_to_vault_federation
+						days = 90
+					}
+				}
+				else = {
+					add_timed_idea = {
+						idea = rejected_invitation_to_vault_federation
+						days = 90
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			join_vault_federation = yes
+		}
+
+		ai_acceptance = {
+			ai_reason_opinion = {
+				base = 0
+				modifier = {
+					add = opinion@ROOT
+				}
+			}
+			ai_reason_surrender_progress = {
+				base = 100
+				modifier = {
+					factor = surrender_progress
+				}
+			}
+			ai_reason_wants_ally = {
+				base = 0
+				modifier = {
+					add = -100
+					check_variable = { ai_attitude_wants_ally = 0 }
+				}
+			}
+			ai_reason_enemy_exposure = {
+				base = 100
+				modifier = {
+					set_temp_variable = { alliance_battalion_count = num_battalions }
+					all_of_scopes = {
+						array = subjects
+						add_to_temp_variable = { alliance_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { new_alliance_battalion_count = alliance_battalion_count }
+					add_to_temp_variable = { new_alliance_battalion_count = ROOT.num_battalions }
+					all_of_scopes = {
+						array = ROOT.allies
+						add_to_temp_variable = { new_alliance_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { current_enemies_battalion_count = 0 }
+					all_of_scopes = {
+						array = enemies
+						add_to_temp_variable = { current_enemies_battalion_count = num_battalions }
+					}
+
+					set_temp_variable = { new_enemies_battalion_count = 0 }
+					all_country = {
+						if = {
+							limit = {
+								OR = {
+									has_war_with = ROOT
+									has_war_with = PREV
+								}
+							}
+							add_to_temp_variable = { new_enemies_battalion_count = num_battalions }
+						}
+					}
+
+					set_temp_variable = { current_ratio = current_enemies_battalion_count }
+					divide_temp_variable = { current_ratio = alliance_battalion_count }
+
+					set_temp_variable = { new_ratio = new_enemies_battalion_count }
+					divide_temp_variable = { new_ratio = new_alliance_battalion_count }
+
+					set_temp_variable = { ratio_diff = current_ratio }
+					subtract_from_temp_variable = { ratio_diff = new_ratio }
+					clamp_temp_variable = {
+						var = ratio_diff
+						min = -1
+						max = 1
+					}
+
+					factor = ratio_diff
+				}
+			}
+			ai_reason_world_tension = {
+				base = -100
+				modifier = {
+					set_temp_variable = { threat_add = 100 }
+					multiply_temp_variable = { threat_add = GLOBAL.threat }
+					add = threat_add
+				}
+			}
+		}
+
+		ai_desire = {
+			base = 0
+			modifier = {
+				set_temp_variable = { op_add = ROOT.opinion@THIS }
+				#multiply_temp_variable = { op_add = 2 }
+				add = op_add
+				check_variable = { ROOT.ai_attitude_wants_ally = 1 }
+			}
+			modifier = {
+				set_temp_variable = { cap_factor = ROOT.surrender_progress }
+				add_to_temp_variable = { cap_factor = 1 }
+				factor = cap_factor
+			}
+			modifier = {
+				factor = GLOBAL.threat
+			}
+			modifier = {
+				factor = 0
+				ROOT = { has_idea = rejected_invitation_to_vault_federation }
+			}
+			modifier = {
+				set_temp_variable = { alliance_battalion_count = ROOT.num_battalions }
+				all_of_scopes = {
+					array = ROOT.allies
+					add_to_temp_variable = { alliance_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { new_alliance_battalion_count = alliance_battalion_count }
+				add_to_temp_variable = { new_alliance_battalion_count = num_battalions }
+				all_of_scopes = {
+					array = subjects
+					add_to_temp_variable = { new_alliance_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { current_enemies_battalion_count = 0 }
+				all_of_scopes = {
+					array = ROOT.enemies
+					add_to_temp_variable = { current_enemies_battalion_count = num_battalions }
+				}
+
+				set_temp_variable = { new_enemies_battalion_count = 0 }
+				all_country = {
+					if = {
+						limit = {
+							OR = {
+								has_war_with = ROOT
+								has_war_with = PREV
+							}
+						}
+						add_to_temp_variable = { new_enemies_battalion_count = num_battalions }
+					}
+				}
+
+				set_temp_variable = { current_ratio = current_enemies_battalion_count }
+				divide_temp_variable = { current_ratio = alliance_battalion_count }
+
+				set_temp_variable = { new_ratio = new_enemies_battalion_count }
+				divide_temp_variable = { new_ratio = new_alliance_battalion_count }
+
+				set_temp_variable = { ratio_diff = current_ratio }
+				subtract_from_temp_variable = { ratio_diff = new_ratio }
+
+				clamp_temp_variable = {
+					var = ratio_diff
+					min = 0
+				}
+
+				factor = ratio_diff
+			}
+		}
+	}
+}

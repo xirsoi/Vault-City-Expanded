@@ -167,7 +167,7 @@ join_vault_federation = {
 					log = "[GetDateText]: [Prev.GetName] join_vault_federation - adding to faction via [This.GetName]... (scripted_effect)"
 				}
 				add_to_faction = PREV
-				#PREV = { news_event = { id = vault_federation_faction_events.4 } }
+				PREV = { news_event = { id = vault_federation_faction_events.4 } }
 				if = {
 					limit = { has_global_flag = debug_logs }
 					log = "[GetDateText]: [Prev.GetName] join_vault_federation - added to faction via [This.GetName]... (scripted_effect)"

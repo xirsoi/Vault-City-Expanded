@@ -1,0 +1,200 @@
+add_namespace = vault_federation_faction_events
+
+country_event = {
+	id      = vault_federation_faction_events.1
+	title   = vault_federation_faction_events.1.t
+	desc    = vault_federation_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = vault_federation_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			country_event = { id = vault_federation_faction_events.2 }
+			join_vault_federation = yes
+			news_event = { id = vault_federation_faction_events.4 }
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = vault_federation_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = vault_federation_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id      = vault_federation_faction_events.2
+	title   = vault_federation_faction_events.2.t
+	desc    = vault_federation_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = vault_federation_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id      = vault_federation_faction_events.3
+	title   = vault_federation_faction_events.3.t
+	desc    = vault_federation_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = vault_federation_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id      = vault_federation_faction_events.4
+	title   = vault_federation_faction_events.4.t
+	desc    = vault_federation_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = vault_federation_faction_events.4.a
+	}
+}
+
+country_event = {
+	id      = vault_federation_faction_events.5
+	title   = vault_federation_faction_events.5.t
+	desc    = vault_federation_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = vault_federation_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = vault_federation_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_vault_federation }
+			}
+			every_country = {
+				limit = { is_vault_federation_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_vault_federation
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_vault_federation
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = rejected_invitation_to_vault_federation }
+					modify_timed_idea = {
+						idea = rejected_invitation_to_vault_federation
+						days = 90
+					}
+				}
+				else = {
+					add_timed_idea = {
+						idea = rejected_invitation_to_vault_federation
+						days = 90
+					}
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = vault_federation_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] vault_federation_faction_events.5.b (event_option) exited"
+		}
+	}
+}
