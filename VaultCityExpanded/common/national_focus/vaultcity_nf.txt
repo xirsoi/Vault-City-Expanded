@@ -150,7 +150,7 @@ focus_tree = {
 		}
 	}
 
-	#Cyclops
+  #Cyclops
 	focus = {
 		id = vault_cyclops
 		icon = GFX_goal_VLT_cyc_war_dec
@@ -538,6 +538,12 @@ focus_tree = {
 					}
 				}
 			}
+			CYC = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = granted_me_territory
+				}
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_feed_cyclops exited"
@@ -545,8 +551,7 @@ focus_tree = {
 		}
 	}
 
-	#Shoshone
-
+  #Shoshone
 	focus = {
 		id = vault_shoshone
 		icon = GFX_goal_VLT_shoshone_war_dec
@@ -919,6 +924,12 @@ focus_tree = {
 					}
 				}
 			}
+			SHO = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = granted_me_territory
+				}
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_feed_sho exited"
@@ -926,7 +937,7 @@ focus_tree = {
 		}
 	}
 
-	#Flock
+  #Flock
 	focus = {
 		id = vault_flock
 		icon = GFX_goal_VLT_flock_war_dec
@@ -1279,6 +1290,12 @@ focus_tree = {
 					}
 				}
 			}
+			PAL = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = granted_me_territory
+				}
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_feed_flock exited"
@@ -1286,8 +1303,7 @@ focus_tree = {
 		}
 	}
 
-	#Riperult
-
+  #Riperult
 	focus = {
 		id = vault_riperult
 		icon = GFX_goal_VLT_rip_war_dec
@@ -1652,6 +1668,12 @@ focus_tree = {
 					}
 				}
 			}
+			RIP = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = granted_me_territory
+				}
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_feed_rip exited"
@@ -1804,7 +1826,7 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] vault_yakuza_agents entered"
 			}
 			load_oob = vault_yakuza_clans
-			add_ideas = vault_yakuza_agents
+			add_ideas = vault_city_yakuza_agents
 			YKZ = {
 				add_ideas = vault_city_yakuza_agents
 				load_oob = yakuza_yakuza_clans
@@ -1939,7 +1961,7 @@ focus_tree = {
 			focus = vault_reno
 		}
 		mutually_exclusive = {
-			focus = vault_reno_runners
+			focus = vault_city_reno_runners
 		}
 		available = {
 			NEW = {
@@ -2006,7 +2028,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = vault_reno_runners
+		id = vault_city_reno_runners
 		icon = GFX_goal_generic_common_firearms_focus
 		cost = 8.6
 		prerequisite = {
@@ -2026,7 +2048,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_reno_runners entered"
+				log = "[GetDateText]: [Root.GetName] vault_city_reno_runners entered"
 			}
 			NEW = {
 				add_tech_bonus = {
@@ -2034,11 +2056,11 @@ focus_tree = {
 					uses = 2
 					category = infantry_weapons_tech_category
 				}
-				add_ideas = vault_reno_runners
+				add_ideas = vault_city_reno_runners
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_reno_runners exited"
+				log = "[GetDateText]: [Root.GetName] vault_city_reno_runners exited"
 			}
 		}
 	}
@@ -2047,11 +2069,11 @@ focus_tree = {
 		icon = GFX_goal_generic_recruitment_focus
 		cost = 8.6
 		prerequisite = {
-			focus = vault_reno_runners
+			focus = vault_city_reno_runners
 		}
 		x = 0
 		y = 1
-		relative_position_id = vault_reno_runners
+		relative_position_id = vault_city_reno_runners
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2284,7 +2306,7 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] vault_antelope_militia entered"
 			}
 			ANT = {
-				add_idea = vault_city_antelope_militia
+				add_ideas = vault_city_antelope_militia
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -2917,8 +2939,8 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] vault_chief_3 entered"
 			}
 			swap_ideas = {
-				add_ideas = avcprot
 				remove_idea = vcprot
+				add_idea = avcprot
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -3884,7 +3906,7 @@ focus_tree = {
 			has_war = no
 			is_in_faction = no
 			any_neighbor_country = {
-				is_brotherhood_of_steel_member = yes
+				is_western_brotherhood_of_steel_member = yes
 			}
 		}
 		completion_reward = {
@@ -3892,7 +3914,7 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
 			}
-			create_or_join_brotherhood_of_steel = yes
+			create_or_join_western_brotherhood_of_steel = yes
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"

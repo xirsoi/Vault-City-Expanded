@@ -1,0 +1,17 @@
+opinion_modifiers = {
+	refused_entry_to_vault_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_vault_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+    granted_me_territory = {
+		months = 60
+		decay = 4
+		value = 40
+	}
+}

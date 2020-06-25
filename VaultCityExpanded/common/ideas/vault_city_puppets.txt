@@ -94,7 +94,7 @@ ideas = {
 			}
 		}
 
-		vault_reno_runners = {
+		vault_city_reno_runners = {
 			picture = vault_open_bonus
 			allowed = {
 				is_puppet_of = VLT
