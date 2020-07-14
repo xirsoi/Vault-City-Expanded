@@ -6,6 +6,6 @@ tags={
     "National Focus"
 }
 path = "mod/VaultCityExpanded"
-picture="thumbnail.png"
+picture="VaultCityExpanded/thumbnail.png"
 version="1.0.0"
 supported_version="1.9.*"
