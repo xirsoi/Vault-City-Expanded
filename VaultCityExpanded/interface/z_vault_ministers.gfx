@@ -1,0 +1,181 @@
+spriteTypes = {
+    
+	#political_advisor 
+	
+	spriteType = {
+		name = "GFX_idea_VLT_expert_negotiator"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_expert_negotiator.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_VLT_captain_of_industry"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_captain_of_industry.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_war_industrialist"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_war_industrialist.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_compassionate_gentleman"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_compassionate_gentleman.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_fortification_engineer"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_fortification_engineer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_VLT_political_workhorse"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_political_workhorse.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_prince_of_terror"
+		texturefile = "gfx/interface/ideas/ministers/political/VLT_prince_of_terror.dds"
+	}	
+	
+    #theorist
+	
+	spriteType = {
+		name = "GFX_idea_VLT_air_warfare_theorist"
+		texturefile = "gfx/interface/ideas/ministers/theorist/VLT_air_warfare_theorist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_VLT_naval_theorist"
+		texturefile = "gfx/interface/ideas/ministers/theorist/VLT_naval_theorist.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_cat_automated_warfare"
+		texturefile = "gfx/interface/ideas/ministers/theorist/VLT_cat_automated_warfare.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_cat_elite_army"
+		texturefile = "gfx/interface/ideas/ministers/theorist/VLT_cat_elite_army.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_cat_grand_army"
+		texturefile = "gfx/interface/ideas/ministers/theorist/VLT_cat_grand_army.dds"
+	}		
+	
+    #army_chief
+
+	spriteType = {
+		name = "GFX_idea_VLT_army_chief_offensive_3"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_army_chief_offensive_3.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_army_chief_defensive_3"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_army_chief_defensive_3.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_army_infantry_1"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_army_infantry_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_VLT_army_armored_2"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_army_armored_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_VLT_army_commando_2"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_army_commando_2.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_sergeant_granite"
+		texturefile = "gfx/interface/ideas/ministers/army_chief/VLT_sergeant_granite.dds"
+	}	
+	
+	
+    #navy_chief	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_navy_chief_decisive_bat"
+		texturefile = "gfx/interface/ideas/ministers/navy_chief/VLT_navy_chief_decisive_bat.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_VLT_generic_navy_anti_submarine"
+		texturefile = "gfx/interface/ideas/ministers/navy_chief/VLT_generic_navy_anti_submarine.dds"
+	}
+
+    #air_chief
+	spriteType = {
+		name = "GFX_idea_VLT_generic_air_close_air_sup"
+		texturefile = "gfx/interface/ideas/ministers/air_chief/VLT_generic_air_close_air_sup.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_VLT_generic_air_chief_all_weather"
+		texturefile = "gfx/interface/ideas/ministers/air_chief/VLT_generic_air_chief_all_weather.dds"
+	}	
+	
+    #high_command
+	spriteType = {
+		name = "GFX_idea_VLT_generic_fo"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_generic_fo.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_VLT_generic_army_log"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_generic_army_log.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_VLT_generic_navy_fleet_log"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_generic_navy_fleet_log.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_VLT_generic_air_air_combat_trainer"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_generic_air_air_combat_trainer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_VLT_field_medic"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_field_medic.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_military_quartermaster"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_military_quartermaster.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_VLT_internal_repair"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_internal_repair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_VLT_tactically_minded"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_tactically_minded.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_VLT_gun_runner"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_gun_runner.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_VLT_esoteric_engineer"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_esoteric_engineer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_VLT_old_soldier"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_old_soldier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_VLT_ranger_instructor"
+		texturefile = "gfx/interface/ideas/ministers/high_command/VLT_ranger_instructor.dds"
+	}	
+
+
+	
+}

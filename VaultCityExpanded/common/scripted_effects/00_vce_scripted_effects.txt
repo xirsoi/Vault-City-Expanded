@@ -59,7 +59,7 @@ mark_as_vault_federation_member = {
 		limit = { is_vault_federation_member = no }
 		set_variable = { current_faction = VFD }
 		add_vault_federation_ally_strategies = yes
-		#add_boneyard_brotherhood_faction_effects = yes
+		#add_vault_federation_faction_effects = yes
 
 		every_country = {
 			limit = {
@@ -148,6 +148,30 @@ add_vault_federation_ally_strategies = {
 	if = {
 		limit = { has_global_flag = debug_logs }
 		log = "[GetDateText]: [This.GetName] add_vault_federation_ally_strategies (scripted_effect) exited"
+	}
+}
+
+# does nothing atm, but may in future
+add_vault_federation_faction_effects = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_vault_federation_faction_effects (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			OR = {
+				is_masters_new_army_member = yes
+				is_northern_league_member = yes
+				is_western_enclave_member = yes
+				is_nevada_enclave_member = yes
+				is_western_brotherhood_of_steel_member = yes
+			}
+		}
+		#make_enemies = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_vault_federation_faction_effects (scripted_effect) exited"
 	}
 }
 

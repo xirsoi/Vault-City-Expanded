@@ -1,0 +1,29 @@
+vault_leader_Vanilla_category = {
+	icon = GFX_decision_category_vault_tec_calling
+	priority = {
+		base = 0
+	}
+	visible = {
+		original_tag = VLT
+		any_country = {
+			OR = {
+				is_puppet_of = ROOT
+				is_in_faction_with = PREV
+			}
+		}
+	}
+}
+
+vault_war_plans_category = {
+	icon = GFX_decision_category_vault_tec_calling
+	priority = {
+		base = 0
+		modifier = {
+			factor = 10
+			has_war = yes
+		}
+	}
+	visible = {
+		has_country_flag = vlt_battlemind
+	}
+}

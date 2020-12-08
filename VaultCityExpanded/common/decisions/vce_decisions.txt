@@ -1,0 +1,431 @@
+#Recruit puppet leaders as generals (Vault City)
+vault_leader_Vanilla_category = {
+    #Polyphemus(cyclops)
+	Vanilla_Polyphemus = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			CYC = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_cyclops_eager		   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+			  name = "Polyphemus"
+			  id = 10046
+			  portrait_path = "gfx/leaders/raider/portrait_raider_generic_2.dds"
+			  traits = {settlement_protector}
+			  skill = 5
+			  attack_skill = 2
+			  defense_skill = 5
+			  planning_skill = 3
+			  logistics_skill = 3
+            }	 			
+		}
+	}
+
+    #Chief Techki(Shoshone)
+	Vanilla_Chief_Techki = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			SHO = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_sho_puppet		   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Chief Techki"
+				portrait_path = "gfx/leaders/SHO/portrait_sho_chieftain.dds"
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+            }	 			
+		}
+	}
+	
+    #Edd Pukaloy(Flock)
+	Vanilla_Edd_Pukaloy = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			PAL = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_flock_goggles		   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Edd Pukaloy"
+				portrait_path = "gfx/leaders/PAL/portrait_pal_leader.dds"
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+            }	 			
+		}
+	}	
+
+    #Mr Bishop(NEW Reno)
+	Vanilla_Mr_Bishop = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			NEW = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_city_reno_runners	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Mr Bishop"
+				portrait_path = "gfx/leaders/NEW/portrait_bishop.dds"
+				skill = 6
+				traits = {}
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
+            }	 			
+		}
+	}	
+	#Bushido Hido(Yakuza)
+	Vanilla_Bushido_Hido = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			YKZ = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_yakuza_agents	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+	           name = "Bushido Hido"
+	           portrait_path = "gfx/leaders/tribal/portrait_tribal_generic_14.dds"
+	           skill = 3
+	           traits = {urban_assault_specialist}
+	           attack_skill = 2
+	           defense_skill = 3
+	           planning_skill = 3
+               logistics_skill = 2
+            }	 			
+		}
+	}		
+
+	#Greathorn(Antelop)
+	Vanilla_Greathorn = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			ANT = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_antelope_slags	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Greathorn"
+				portrait_path = "gfx/leaders/tribal/portrait_tribal_generic_6.dds"
+	            skill = 3
+	            attack_skill = 2
+	            defense_skill = 3
+	            planning_skill = 2
+	            logistics_skill = 3
+            }	 			
+		}
+	}		
+	
+	#Metzger Jr(Klamath)
+	Vanilla_Metzger_Jr = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			KLA = {
+				is_puppet_of = PREV
+			}
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_klamath_den	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Metzger Jr"
+				portrait_path = "gfx/leaders/settler/portrait_settler_generic_23.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2	
+            }	 			
+		}
+	}
+	#Vikter(brain allies)
+	Vanilla_Vikter = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			is_brain_leader = yes
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_brain_5allies	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Vikter"
+				portrait_path = "gfx/leaders/supermutant/portrait_supermutant_generic_5.dds"
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3	
+            }	 			
+		}
+	}	
+
+	#Alexander(first allies)
+	Vanilla_Alexander = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			is_lynette_leader = yes
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_brotherhood_pact_of_steel	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Alexander"
+				portrait_path = "gfx/leaders/BOS/portrait_generic.dds"
+				skill = 4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+            }	 			
+		}
+	}	
+
+	#Napoleon(chief allies)
+	Vanilla_Napoleon = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			is_wallace_leader = yes
+		}
+		available = {
+		  original_tag = VLT
+          WBH = {
+			is_in_faction_with = PREV
+		  }
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Napoleon"
+				portrait_path = "gfx/leaders/WBH/portrait_immortal.dds"
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3	
+            }	 			
+		}
+	}	
+
+	#Hannibal(festus allies)
+	Vanilla_Hannibal = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		visible = {
+			is_festus_leader = yes
+		}
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_enemies_of_enemies	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Hannibal"
+				portrait_path = "gfx/leaders/ghoul/portrait_ghoul_generic_3.dds"
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+            }	 			
+		}
+	}
+	
+    #Sgt. Granite(Enclave)
+	Vanilla_Sgt_Granite = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_enclave_5	   
+		}	
+		complete_effect = {
+           create_corps_commander = {
+				name = "Sgt. Granite"
+				portrait_path = "gfx/leaders/NEW/portrait_new_granite.dds"
+				skill = 5
+				traits = {}
+				attack_skill = 3
+				defense_skill = 6
+				planning_skill = 3
+				logistics_skill = 4
+            }	 			
+		}
+	}
+	
+    #Arch Dornan(Enclave)
+	Vanilla_Arch_Dornan = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		available = {
+		  original_tag = VLT
+          has_completed_focus = vault_enclave_8   
+		}	
+		complete_effect = {
+			create_field_marshal = {
+				name = "Arch Dornan"
+				desc = "Dornan_DESC"
+				portrait_path = "gfx/leaders/NEW/portrait_new_arch_dornan.dds"
+				skill = 6
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 5
+				logistics_skill = 5
+			}	 			
+		}
+	}	
+}
+
+vault_war_plans_category = {
+	vce_VLT_give_battlemind = {
+		icon = vaulttec
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = PREV
+				NOT = { has_country_flag = vlt_battlemind }
+				OR = {
+					tag = NEW
+					tag = DES
+					tag = VEG
+					has_country_flag = vce_major_vlt_ally
+				}
+			}
+		}
+		available = {
+			original_tag = VLT
+			has_completed_focus = vault_nevada_war_plans
+		}
+
+	}
+	
+	vce_make_war_plans_VLT = {
+		icon = vaulttec
+		target_trigger = {
+			at_risk_of_war_with_from_trigger = yes
+		}
+		available = {
+			original_tag = VLT
+			has_country_flag = vlt_battlemind
+		}
+		modifier = {
+			command_power_gain_mult = -0.20
+		}
+		days_remove = 21
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = vce_VLT_war_plans days = 60 }
+			}
+		}
+	}
+
+	vce_make_war_plans_NEW = {
+		icon = vaulttec
+		target_trigger = {
+			at_risk_of_war_with_from_trigger = yes
+		}
+		available = {
+			original_tag = NEW
+			has_country_flag = vlt_battlemind
+		}
+		modifier = {
+			command_power_gain_mult = -0.20
+		}
+		days_remove = 21
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = vce_NEW_war_plans days = 60 }
+			}
+		}
+	}
+
+	vce_make_war_plans_DES = {
+		icon = vaulttec
+		target_trigger = {
+			at_risk_of_war_with_from_trigger = yes
+		}
+		available = {
+			original_tag = DES
+			has_country_flag = vlt_battlemind
+		}
+		modifier = {
+			command_power_gain_mult = -0.20
+		}
+		days_remove = 21
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = vce_DES_war_plans days = 60 }
+			}
+		}
+	}
+
+	vce_make_war_plans_VEG = {
+		icon = vaulttec
+		target_trigger = {
+			at_risk_of_war_with_from_trigger = yes
+		}
+		available = {
+			original_tag = VEG
+			has_country_flag = vlt_battlemind
+		}
+		modifier = {
+			command_power_gain_mult = -0.20
+		}
+		days_remove = 21
+		remove_effect = {
+			FROM = {
+				add_timed_idea = { idea = vce_VEG_war_plans days = 60 }
+			}
+		}
+	}
+}

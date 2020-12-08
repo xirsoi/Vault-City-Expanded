@@ -1,0 +1,419 @@
+ideas = {
+    country = {
+	    ###Add By VaultFoodie###
+		######
+		#New Vault
+		######
+		#Vault Living
+		Vault_Living1 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				weekly_manpower = 1
+			}
+		}
+
+		Vault_Living2 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				weekly_manpower = 2				
+			}
+		}
+		
+		Vault_Living3 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			modifier = {
+				weekly_manpower = 3
+			}
+		}		
+
+		#Vault Science
+		Vault_Science1 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+		        experience_loss_factor = -0.1
+			}
+		}
+
+		Vault_Science2 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+		        experience_loss_factor = -0.1
+				research_speed_factor =0.05			
+			}
+		}
+
+		Vault_Science3 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			modifier = {	
+		        experience_loss_factor = -0.1
+				research_speed_factor =0.05	
+                planning_speed = 0.1				
+			}
+		}
+		
+		BetterLivingUnderground	 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			modifier = {
+				weekly_manpower = 5
+		        experience_loss_factor = -0.1
+ 				research_speed_factor =0.05		
+                planning_speed = 0.1
+			    stability_factor = 0.1
+                war_support_factor = 0.1
+				army_morale_factor = 0.05
+				army_org_Factor = 0.05					
+			}
+		}		
+		Vault_Enclave1 = {
+			picture = enclave_helmet
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			research_bonus = {
+				energy_weaponry_tech_category = 0.25
+			}	
+			modifier = {
+                elites_drift = 0.12			
+			}				
+		}
+
+		Vault_Enclave2 = {
+			picture = enclave_helmet
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			research_bonus = {
+				energy_weaponry_tech_category = 0.25
+			}			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}		
+			modifier = {
+                elites_drift = 0.14		
+			}	
+		}
+
+		Vault_Enclave3 = {
+			picture = enclave_helmet
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			research_bonus = {
+				energy_weaponry_tech_category = 0.25
+			}			
+			equipment_bonus = {
+				power_armor_equipment = {#enclave_power_armour_equipment_1
+				build_cost_ic = -0.1
+				instant = yes
+		        }
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+			modifier = {
+                elites_drift = 0.16			
+			}			
+		}
+
+		Vault_Enclave4 = {
+			picture = enclave_helmet
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			research_bonus = {
+				energy_weaponry_tech_category = 0.25
+			}			
+			equipment_bonus = {
+				power_armor_equipment = {#enclave_power_armour_equipment_1
+				build_cost_ic = -0.1
+				instant = yes
+		        }
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}		
+			modifier = {	
+                conscription = 0.015
+                elites_drift = 0.18			
+			}
+		}
+
+		Vault_Enclave5 = {
+			picture = vault_open_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes	
+			}
+			research_bonus = {
+				energy_weaponry_tech_category = 0.25
+			}			
+			equipment_bonus = {
+				power_armor_equipment = {#enclave_power_armour_equipment_1
+				build_cost_ic = -0.1
+				instant = yes
+		        }
+				infantry_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}		
+			modifier = {	
+                conscription = 0.015
+                non_core_manpower = 0.20
+                elites_drift = 0.20
+			}
+		}		
+		###
+
+		vault_infrastructure_investment = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		vault_infrastructure_exported = {
+			picture = construction_penalty
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+		vault_trust = {
+			picture = vault_city
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				subjects_autonomy_gain = 0.25
+				political_power_gain = 0.25
+			}
+		}
+		vault_control = {
+			picture = vault_city
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				subjects_autonomy_gain = -0.25
+				political_power_gain = -0.25
+			}
+		}
+		nevada_defence_council = {
+			picture = raids2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_army = 0.05
+				army_org_Factor = 0.1
+			}
+			cancel = { is_in_faction = no }
+		}
+		ranger_cross_training = {
+			picture = DES_guarantee_nevada
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.05
+				acclimatization_hot_climate_gain_factor = 0.05
+			}
+			cancel = { NOT = { is_in_faction = DES } }
+		}
+		reno_chem_market = {
+			picture = chems_legal
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.1
+			}
+			cancel = { NOT = { is_in_faction_with = NEW } }
+		}
+		vault_city_medical_research = {
+			picture = vault_city
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			research_bonus = {
+				support_medical_tech_category = 0.1
+			}
+			cancel = { NOT = { is_in_faction_with = VLT } }
+		}
+		vault_city_markets = {
+			picture = vault_city
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			cancel = { NOT = { is_in_faction_with = VLT } }
+		}
+		vegas_vault_data = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				compliance_gain = 0.1
+				resistance_target = -0.1
+			}
+		}
+
+		# battlemind ideas
+		vce_VLT_war_plans = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			# negative modifiers are intentional
+			targeted_modifier = {
+				tag = VLT
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		vce_NEW_war_plans = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = NEW
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		vce_DES_war_plans = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = DES
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		vce_VEG_war_plans = {
+			picture = vaulttec
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = VEG
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+    }
+}

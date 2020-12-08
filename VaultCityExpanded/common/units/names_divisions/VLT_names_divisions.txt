@@ -1,0 +1,483 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names.
+#           Numbers must start from 1 and up.
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either:
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+#Vault City Security
+_VLT_INF_01 = {
+	name = "Vault City Security"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { VLT_INF_02 }
+
+	fallback_name = "%d Security Team"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "1st Citizen Security" }
+		2 = { "2nd 'Dwellers' Guard" }
+		3 = { "3rd 'All Clears' Guard" }
+		4 = { "4th 'Pip-boy' Guard" }
+		5 = { "5th 'Wallace's Whollupers' Guard" }
+		6 = { "6th Vault Defense Team" }
+		7 = { "7th Gecko Occupational Team" }
+		8 = { "8th Courtyard Riot Team" }
+		9 = { "9th Wasteland Scouting Team" }
+		10 = { "10th Golgotha Patrollers" }
+		11 = { "11th 'Councilor McClure' Guard" }
+		12 = { "12th 'Randal's Vandals' Guard" }
+		13 = { "13th 'Kohl's Lost Souls' Guard" }
+		14 = { "14th 'Lydia, Oh Lydia' Guard" }
+		15 = { "15th 'Basher' Guard" }
+		16 = { "16th 'Bear Arms' Guard" }
+		17 = { "17th 'Blocker' Guard" }
+		18 = { "18th 'Bullet Shield' Guard" }
+		19 = { "19th 'Incisor' Guard" }
+		20 = { "20th 'Iron Fist' Guard" }
+		21 = { "21th 'Martial Artist' Guard" }
+		22 = { "22th 'Ordnance Express' Guard" }
+		23 = { "23th 'Pack Rat' Guard" }
+		24 = { "24th 'Scattershot' Guard" }
+		25 = { "25th 'Shotgunner' Guard" }
+		26 = { "26th 'Slugger' Guard" }
+		27 = { "27th 'Strong Back' Guard" }
+		28 = { "28th 'Sturdy Frame' Guard" }
+		29 = { "29th 'Butcher's Bounty' Guard" }
+		30 = { "30th 'Lock and Load' Guard" }
+		31 = { "31th 'Concentrated Fire' Guard" }
+		32 = { "32th 'Crack Shot' Guard" }
+		33 = { "33th 'Exterminator' Guard" }
+		34 = { "34th 'Fire in the Hole' Guard" }
+		35 = { "35th 'Picklock' Guard" }
+		36 = { "36th 'Green Thumb' Guard" }
+		37 = { "37th 'Refractor' Guard" }
+		38 = { "38th 'Rifleman' Guard" }
+		39 = { "39th 'Skeet Shooter' Guard" }
+		40 = { "40th 'All Night Long' Guard" }
+		41 = { "41th 'Aquaboy' Guard" }
+		42 = { "42th 'Aquagirl' Guard" }
+		43 = { "43th 'Cannibal' Guard" }
+		44 = { "44th 'Chem Fiend' Guard" }
+		45 = { "45th 'Chem Resistant' Guard" }
+		46 = { "46th 'Ghoulish' Guard" }
+		47 = { "47th 'Hydro Fix' Guard" }
+		48 = { "48th 'Lifegiver' Guard" }
+		49 = { "49th 'Nocturnal Fortitude' Guard" }
+		50 = { "50th 'Photosynthetic' Guard" }
+		51 = { "51th 'Revenant' Guard" }
+		52 = { "52th 'Solar Powered' Guard" }
+		53 = { "53th 'Sun Kissed' Guard" }
+		54 = { "54th 'E.M.T.' Guard" }
+		55 = { "55th 'Field Surgeon' Guard" }
+		56 = { "56th 'Friendly Fire' Guard" }
+		57 = { "57th 'Hard Bargain' Guard" }
+		58 = { "58th 'Healing Hands' Guard" }
+		59 = { "59th 'Injector' Guard" }
+		60 = { "60th 'Inspirational' Guard" }
+		61 = { "61th 'Overly Generous' Guard" }
+		62 = { "62th 'Party Boy' Guard" }
+		63 = { "63th 'Party Girl' Guard" }
+		64 = { "64th 'Philanthropist' Guard" }
+		65 = { "65th 'Squad Maneuvers' Guard" }
+		66 = { "66th 'Suppressor' Guard" }
+		67 = { "67th 'Tenderizer' Guard" }
+		68 = { "68th 'Spiritual Healer' Guard" }
+		69 = { "69th 'Team Medic' Guard" }
+		70 = { "70th 'Quack Surgeon' Guard" }
+		71 = { "71th 'Wasteland Whisperer' Guard" }
+		72 = { "72th 'Chemist' Guard" }
+		73 = { "73th 'Contracto' Guard" }
+		74 = { "74th 'Demolition Expert' Guard" }
+		75 = { "75th 'First Aid' Guard" }
+		76 = { "76th 'Fix It Good' Guard" }
+		77 = { "77th 'Gunsmith' Guard" }
+		78 = { "78th 'Expert Hacker' Guard" }
+		79 = { "79th 'Licensed Plumber' Guard" }
+		80 = { "80th 'Makeshift Warrior' Guard" }
+		81 = { "81th 'Pharmacist' Guard" }
+		82 = { "82th 'Robotics Expert' Guard" }
+		83 = { "83th 'Science Expert' Guard" }
+		84 = { "84th 'Scrapper' Guard" }
+		85 = { "85th 'Stabilized' Guard" }
+		86 = { "86th 'Weapon Artisa' Guard" }
+		87 = { "87th 'Wrecking Ball' Guard" }
+		88 = { "88th 'Adrenaline' Guard" }
+		89 = { "89th 'Ammosmith' Guard" }
+		90 = { "90th 'Born Survivor' Guard" }
+		91 = { "91th 'Dodgy' Guard" }
+		92 = { "92th 'Escape Artist' Guard" }
+		93 = { "93th 'Evasive' Guard" }
+		94 = { "94th 'Expert Guerrilla' Guard" }
+		95 = { "95th 'Expert Gunslinger' Guard" }
+		96 = { "96th 'Goat Legs' Guard" }
+		97 = { "97th 'Gun Fu' Guard" }
+		98 = { "98th 'Gun Runner' Guard" }
+		99 = { "99th 'Home Defense' Guard" }
+		100 = { "100th 'Marathoner' Guard" }
+		101 = { "101th 'Ricochet' Guard" }
+		102 = { "102th 'Woodchucker' Guard" }
+		103 = { "103th 'Scrounger' Guard" }
+		104 = { "104th 'Serendipity' Guard" }
+		105 = { "105th 'Starched Genes' Guard" }
+		106 = { "106th 'Super Duper' Guard" }
+		107 = { "107th 'Can Do!' Guard" }
+		108 = { "108th 'Cap Collecto' Guard" }
+		109 = { "109th 'Class Freak' Guard" }
+		110 = { "110th 'Critical Savvy' Guard" }
+	    111 = { "111th 'Curator' Guard" }
+		112 = { "112th 'Dry Nurse' Guard" }
+		113 = { "113th 'Pharma Farma' Guard" }
+		114 = { "114th 'Anti-Epidemic' Guard" }
+		115 = { "115th 'Pannapictagraphist' Guard" }
+		116 = { "116th 'Traveling Pharmacy' Guard" }
+		117 = { "117th 'Vaccinated' Guard" }
+		118 = { "118th 'Strange in Numbers' Guard" }
+		119 = { "119th 'Clubber' Guard" }
+		120 = { "120th 'Top Gun' Guard" }
+	}
+}
+
+###
+###Bons From Vault Foodie0226
+
+#Vault Foodie
+_VLT_Vault_Foodie_01 = {
+	name = "Vault Foodie"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "power_armour" }
+
+	fallback_name = "%d Guard"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "1st 'Vault Foodie' Guard" }
+		2 = { "2nd 'Cola Nut' Guard" }
+		3 = { "3rd 'Professional Drinker' Guard" }
+		4 = { "4th 'Lead Belly' Guard" }
+		5 = { "5th 'Iron Stomach!' Guard" }
+		6 = { "6th 'Nerd Rage!' Guard" }
+		7 = { "7th 'Good with Salt' Guard" }		
+		8 = { "8th 'Rejuvenated' Guard" }		
+		9 = { "9th 'Homebody' Guard" }
+		10 = { "10th 'Dromedary' Guard" }
+		11 = { "11th 'Good Doggy' Guard" }
+		12 = { "12th 'Hydrated' Guard" }
+		13 = { "13th 'Slow Metabolizer' Guard" }
+		14 = { "14th 'Thirst Quencher' Guard" }
+		15 = { "15th 'Happy Camper' Guard" }
+		16 = { "16th 'Happy-Go-Lucky' Guard" }
+		17 = { "17th 'Thru-hiker' Guard" }
+		18 = { "18th 'Mystery Meat' Guard" }		
+	}
+}
+#Power Ammor
+
+_VLT_Power_Armour_01 = {
+	name = "Vault City Power Armour"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "power_armour" }
+
+	fallback_name = "%d Power Armor Guard"
+
+	ordered = {
+		1 = { "1st 'Full Charge' Armor Guard" }
+		2 = { "2nd 'Pain Train' Armor Guard" }
+		3 = { "3rd 'Portable Power' Armor Guard" }
+		4 = { "4th 'Power Smith' Armor Guard" }
+		5 = { "5th 'Power Patcher' Armor Guard" }
+		6 = { "6th 'Power User' Armor Guard" }
+		7 = { "7th 'Weapon Artisan' Armor Guard" }		
+		8 = { "8th 'Glow Sight' Armor Guard" }		
+		9 = { "9th 'Fireproof' Armor Guard" }
+		10 = { "10th 'Rad Sponge' Armor Guard" }
+		11 = { "11th 'Armorer' Armor Guard" }
+		12 = { "12th 'Batteries Included' Armor Guard" }
+		13 = { "13th 'Contractor' Armor Guard" }
+		14 = { "14th 'Bloody Mess' Armor Guard" }
+		15 = { "15th 'Walking Arsenal' Armor Guard" }
+		16 = { "16th 'Bodyguards' Armor Guard" }
+		17 = { "17th 'One Gun Army' Armor Guard" }
+		18 = { "18th 'Creature Crusher' Armor Guard" }
+		19 = { "19th 'Monster Muffler' Armor Guard" }
+		20 = { "20th 'Steel Legion' Armor Guard"}
+		21 = { "21th 'Man-at-arms' Armor Guard" }
+		22 = { "22th 'Iron Knight' Armor Guard" }
+		23 = { "23th 'Full Metal Jacket' Armor Guard" }
+		24 = { "24th 'Vault-Tec' Armor Guard" }
+	}
+}
+
+#Tank & APC
+
+_VLT_Armor_01 = {
+	name = "Tank & APC"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	fallback_name = "%d Armor"
+
+	ordered = {
+		1 = { "1st 'Tank Killer' Armored" }
+		2 = { "2nd 'Adamantium Skeleton' Armored" }
+		3 = { "3rd 'Ironclad' Armored" }
+		4 = { "4th 'Animal Friend' Armored" }
+		5 = { "5th 'White Knight' Armored" }
+		6 = { "6th 'Better Criticals' Armored" }
+		7 = { "7th 'Cap Collector' Armored" }		
+		8 = { "8th 'Four Leaf Clover' Armored" }		
+		9 = { "9th 'Junk Shield' Armored" }
+		10 = { "10th 'Fashion Finder' Armored" }
+		11 = { "11th 'Fortune Finder' Armored" }
+		12 = { "12th 'Percepti-bobble' Armored" }
+		13 = { "13th 'Munchy Resistance' Armored" }
+		14 = { "14th 'Natural Resistance' Armored" }
+		15 = { "15th 'Briefcase Detector' Armored" }
+		16 = { "16th 'Lone Wanderer' Armored" }
+		17 = { "17th 'Magnetic Personality' Armored" }
+		18 = { "18th 'Travel Agent	' Armored" }
+		19 = { "19th 'Dead Man Sprinting' Armored" }
+		20 = { "20th 'Action Boy' Armored" }
+		21 = { "21th 'Action Girl' Armored" }
+		22 = { "22th 'Modern Renegade' Armored" }
+		23 = { "23th 'Moving Target' Armored" }
+		24 = { "24th 'Packin' Light' Armored" }
+		25 = { "25th 'Storm Chaser' Armored" }
+		26 = { "26th 'Grim Reaper's Sprint' Armored" }
+		27 = { "27th 'Last Laugh' Armored" }
+		28 = { "28th 'Luck of the Draw' Armored" }
+		29 = { "29th 'Lucky Break' Armored" }
+		30 = { "30th 'Quick Hands' Armored" }
+	}
+}
+
+#Super Hero
+_VLT_Super_Hero_01 = {
+	name = "Super Hero"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "power_armour" }
+
+	fallback_name = "%d Grenadier Division"
+
+	ordered = {
+		1 = { "1st 'Silver Shroud' Division" }
+		2 = { "2nd 'Mistress of Mystery' Division" }
+		3 = { "3rd 'Manta Man' Division" }
+		4 = { "4th 'Grognak the Barbarian' Division" }
+		5 = { "5th 'Mechanist' Division" }
+		6 = { "6th 'Captain Cosmos' Division" }
+		7 = { "7th 'Jangles the Moon Monkey' Division" }		
+		8 = { "8th 'Nuka-Girl' Division" }		
+		9 = { "9th 'StormTrooper' Division" }
+		10 = { "10th 'Sparta' Division" }
+		11 = { "11th 'Grenadier' Division" }
+		12 = { "12th 'Praetorian Guard' Division" }
+	}
+}
+
+#Special Forces
+
+_VLT_Special_Forces_01 = {
+	name = "Special Forces"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Rangers"
+
+	ordered = {
+		1 = { "1st 'Gladiator' Rangers" }
+		2 = { "2nd 'Heavy Gunner' Rangers" }
+		3 = { "3rd 'Grenadier' Rangers" }
+		4 = { "4th 'Ground Pounder' Rangers" }
+		5 = { "5th 'Awareness' Rangers" }
+		6 = { "6th 'Commando' Rangers" }
+		7 = { "7th 'Long Shot' Rangers" }		
+		8 = { "8th 'Night Eyes' Rangers" }		
+		9 = { "9th 'Night Person' Rangers" }
+		10 = { "10th 'Sniper' Rangers" }
+		11 = { "11th 'Bloodsucker' Rangers" }
+		12 = { "12th 'Covert Operative' Rangers" }
+		13 = { "13th 'Enforcer' Rangers" }
+		14 = { "14th 'Mister Sandman' Rangers" }
+		15 = { "15th 'Light Footed' Rangers" }
+		16 = { "16th 'Ninja' Rangers" }
+		17 = { "17th 'Secret Agent' Rangers" }
+		18 = { "18th 'Sneak' Rangers" }
+		19 = { "19th 'Tormentor' Rangers" }
+		20 = { "20th 'Mysterious Savior' Rangers" }
+		21 = { "21th 'Mysterious Stranger' Rangers" }
+		22 = { "22th 'Psychopath' Rangers" }
+		23 = { "23th 'Bandolier' Rangers" }
+		24 = { "24th 'Barbarian' Rangers" }	
+	}
+}
+
+
+#Robo-Security
+
+_VLT_Robo_Security_01 = {
+	name = "Robo-Security"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Robo-Security Division"
+
+	ordered = {
+		1 = { "1st 'Commercial Protectron' Division" }
+		2 = { "2nd 'Security Protectron' Division" }
+		3 = { "3rd 'Mister Handy' Division" }
+		4 = { "4th 'Miss Nanny' Division" }
+		5 = { "5th 'Mister Gutsy' Division" }
+		6 = { "6th 'Eyebot' Division" }
+	}
+}
+
+#Combat Robotics
+
+_VLT_Combat_Robotics_01 = {
+	name = "Combat Robotics"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Combat Robotics Division"
+
+	ordered = {
+		1 = { "1st 'Assaultron' Division" }
+		2 = { "2nd 'Heavy Lifter Bot' Division" }
+		3 = { "3rd 'Sentry Bot' Division" }
+		4 = { "4th 'Sentry Bot Mk2' Division" }
+	}
+}
+
+_VLT_Ghoul_01 = {
+	name = "Ghoul Infantry"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+	
+	fallback_name = "%d Ghoul Company"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "1st 'Adrenal Reaction' Company" }
+		2 = { "2nd 'Bird Bones' Company" }
+		3 = { "3rd 'Chameleon' Company" }
+		4 = { "4th 'Eagle Eyes' Company" }
+		5 = { "5th 'Egg Head' Company" }
+		6 = { "6th 'Electrically Charged' Company" }
+		7 = { "7th 'Empath Teammates' Company" }
+		8 = { "8th 'Grounded' Company" }
+		9 = { "9th 'Healing Factor' Company" }
+		10 = { "10th 'Herbivore' Company" }
+		11 = { "11th 'Herd Mentalit' Company" }
+		12 = { "12th 'Marsupial' Company" }
+		13 = { "13th 'Carnivore' Company" }
+		14 = { "14th 'Plague Walker' Company" }
+		15 = { "15th 'Scaly Skin' Company" }
+		16 = { "16th 'Speed Demon' Company" }
+		17 = { "17th 'Talons' Company" }
+		18 = { "18th 'Twisted Muscles' Company" }		
+	}
+}
+
+_VLT_Super_Mutant_01 = {
+	name = "Super Mutant Infantry"
+
+	for_countries = { VLT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+	
+	fallback_name = "%d Tribe"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "1st 'Carnivore' Tribe" }
+		2 = { "2nd 'Plague Walker' Tribe" }
+		3 = { "3rd 'Scaly Skin' Tribe" }
+		4 = { "4th 'Speed Demon' Tribe" }
+		5 = { "5th 'Talons' Tribe" }
+		6 = { "6th 'Twisted Muscles' Tribe" }
+		7 = { "7th 'Adrenal Reaction' Tribe" }
+		8 = { "8th 'Bird Bones' Tribe" }
+		9 = { "9th 'Chameleon' Tribe" }
+		10 = { "10th 'Eagle Eyes' Tirbe" }
+		11 = { "11th 'Egg Head' Tribe" }
+		12 = { "12th 'Electrically Charged' Tribe" }
+		13 = { "13th 'Empath Teammates' Tribe" }
+		14 = { "14th 'Grounded' Tribe" }
+		15 = { "15th 'Healing Factor' Tribe" }
+		16 = { "16th 'Herbivore' Tribe" }
+		17 = { "17th 'Herd Mentality' Tribe" }
+		18 = { "18th 'Marsupial' Tribe" }
+	}
+}

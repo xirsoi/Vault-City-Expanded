@@ -1,0 +1,76 @@
+add_namespace = nf_vault_city
+
+country_event = {
+	id      = nf_vault_city.100
+	title   = nf_vault_city.100.title
+	desc    = nf_vault_city.100.desc
+	picture = GFX_report_event_fascist_speach
+
+	is_triggered_only = yes
+
+    option = {
+        name = nf_vault_city.100.a
+
+        add_ideas = nevada_defence_council
+    }
+}
+
+country_event = {
+	id      = nf_vault_city.101
+	title   = nf_vault_city.101.title
+	desc    = nf_vault_city.101.desc
+	picture = GFX_report_event_fascist_speach
+
+	is_triggered_only = yes
+
+    option = {
+        name = nf_vault_city.101.a
+
+        add_ideas = vault_city_medical_research
+    }
+}
+
+country_event = {
+	id      = nf_vault_city.102
+	title   = nf_vault_city.102.title
+	desc    = nf_vault_city.102.desc
+	picture = GFX_report_event_fascist_speach
+
+	is_triggered_only = yes
+
+    option = {
+        name = nf_vault_city.102.a
+
+        add_ideas = vault_city_medical_research
+    }
+}
+
+country_event = {
+	id      = nf_vault_city.103
+	title   = nf_vault_city.103.title
+	desc    = nf_vault_city.103.desc
+	picture = GFX_report_event_fascist_speach
+
+	is_triggered_only = yes
+
+    option = {
+        name = nf_vault_city.103.a
+
+        custom_tooltip = vlt_battlemind
+    }
+}
+
+country_event = {
+	id 		= nf_vault_city.104
+	title 	= nf_vault_city.104.title
+	desc 	= nf_vault_city.104.desc
+	picture = GFX_report_event_fascist_speach
+
+	is_triggered_only = yes
+	
+	option = {
+		name = nf_vault_city.104.a
+
+		add_ideas = vault_city_trade
+	}
+}

@@ -19,3 +19,28 @@ is_vault_federation_member = {
     }
   }
 }
+
+at_risk_of_war_with_from_trigger = {
+  custom_trigger_tooltip = {
+    tooltip = risk_of_war_tt
+    OR = {
+      is_claimed_by = FROM
+      FROM = {
+        OR = {
+          is_claimed_by = PREV
+          is_justifying_wargoal_against = PREV
+        }
+      }
+      has_war_with = FROM
+      is_justifying_wargoal_against = FROM
+      any_country = {
+        is_in_faction_with = PREV
+        OR = {
+          is_justifying_wargoal_against = FROM
+          is_claimed_by = FROM
+          has_war_with = FROM
+        }
+      }
+    }
+  }
+}

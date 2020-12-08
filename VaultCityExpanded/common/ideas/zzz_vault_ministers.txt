@@ -1,0 +1,397 @@
+ideas = {
+    #VaultFoodie added ministers
+	cultural_advisor = {
+	    VLT_expert_negotiator = {
+		
+			picture = VLT_expert_negotiator
+			
+			allowed = {
+				original_tag = VLT
+			}
+			modifier = {
+           	local_resources_factor = 0.05
+			production_speed_electricity_generator_factor = 0.1
+		    production_speed_metal_generator_factor = 0.1
+		    production_speed_water_generator_factor = 0.1
+            }
+			traits = { 
+				expert_negotiator
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+	    VLT_captain_of_industry = {
+			picture = VLT_captain_of_industry
+			allowed = {
+				original_tag = VLT
+			}
+			research_bonus = {
+			    industry = 0.10
+				electronics = 0.10		
+			}		
+			traits = { 
+				captain_of_industry
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+	    VLT_war_industrialist = {
+			picture = VLT_war_industrialist
+			
+			allowed = {
+				original_tag = VLT
+			}
+			modifier = {
+		    conversion_cost_civ_to_mil_factor= -0.5
+			industry_free_repair_factor = 0.25			
+            }			
+			traits = { 
+				war_industrialist
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+	    VLT_fortification_engineer = {
+			picture = VLT_fortification_engineer
+			
+			allowed = {
+				original_tag = VLT
+			}
+			modifier = {
+            justify_war_goal_time = -0.25
+			industry_repair_factor = 0.25
+            }				
+			traits = { 
+				fortification_engineer
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}	
+
+	    VLT_political_workhorse = {
+			picture = VLT_political_workhorse
+			allowed = {
+				original_tag = VLT
+			}
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor =0.1		
+			conscription_factor = 0.05		
+            }				
+			traits = { 
+				political_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+	    VLT_prince_of_terror = {
+			picture = VLT_prince_of_terror
+			
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { prince_of_terror }
+			ai_will_do = {
+				factor = 0
+			}
+		}		
+		
+	}
+	
+    research_advisor = {		
+		VLT_air_warfare_theorist = {
+			picture = VLT_air_warfare_theorist
+			allowed = {
+				original_tag = VLT
+			}
+
+			traits = { 
+				air_warfare_theorist
+			}
+		}
+		
+		 VLT_naval_theorist = {
+			picture = VLT_naval_theorist
+			allowed = {
+				original_tag = VLT
+			}
+
+			traits = { 
+				naval_theorist
+			}
+		}
+
+		VLT_cat_automated_warfare = {
+			picture = VLT_cat_automated_warfare
+			
+			allowed = {
+				original_tag = VLT
+			}
+
+			research_bonus = {
+			    cat_automated_warfare = 0.1
+			}
+			traits = { military_theorist }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		VLT_cat_elite_army = {
+			picture = VLT_cat_elite_army
+			
+			allowed = {
+				original_tag = VLT
+			}
+
+			research_bonus = {
+			    cat_elite_army = 0.1
+			}
+			traits = { military_theorist }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		VLT_cat_grand_army = {
+			picture = VLT_cat_grand_army
+			
+			allowed = {
+				original_tag = VLT
+			}
+
+			research_bonus = {
+				cat_grand_army = 0.10
+
+			}
+			traits = { military_theorist }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}		
+
+		
+    }
+	
+	army_chief= {		
+		VLT_army_chief_offensive_3 = {
+			picture = VLT_army_chief_offensive_3
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { army_chief_offensive_2 }
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+		
+		VLT_army_chief_defensive_3 = {
+			picture = VLT_army_chief_defensive_3
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { army_chief_defensive_2 }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		VLT_army_infantry_1 = {
+			picture = VLT_army_infantry_1
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { army_infantry_2 }
+			ai_will_do = {
+				factor = 20
+			}
+		}	
+		VLT_army_armored_2 = {
+			picture = VLT_army_armored_2
+			
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { army_chief_morale_2 }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		VLT_army_commando_2 = {
+			picture = VLT_army_commando_2
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { army_commando_2 }
+			ai_will_do = {
+				factor = 10
+			}
+		}		
+		
+		#Enclave
+		VLT_sergeant_granite = {
+
+			picture = VLT_sergeant_granite
+
+			allowed = {
+				original_tag = VLT
+			}
+			available = {
+				has_completed_focus = vault_enclave_5
+			}
+			traits = { drill_sergeant }
+		}
+		
+	}
+
+	navy_chief = {		
+
+		VLT_navy_chief_decisive_bat = {
+		    picture = VLT_navy_chief_decisive_bat
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { navy_chief_decisive_battle_2 }
+		}
+		
+		VLT_generic_navy_anti_submarine = {
+			picture = VLT_generic_navy_anti_submarine
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { navy_anti_submarine_2 }
+		}
+	}
+	
+	air_chief = {
+
+		VLT_generic_air_close_air_sup = {
+			picture = VLT_generic_air_close_air_sup 
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { air_close_air_support_2 }
+		}
+	
+		VLT_generic_air_chief_all_weather = {
+			picture = VLT_generic_air_chief_all_weather
+			allowed = {
+				original_tag = VLT
+			}			
+			traits = { air_chief_all_weather_2 }			
+		}
+	}
+
+	high_command = {
+		VLT_generic_fo= {
+			picture =VLT_generic_fo
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { frontline_operative }			
+		}
+		VLT_generic_army_log = {
+			picture = VLT_generic_army_log
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { army_logistics_2 }			
+		}
+		VLT_generic_navy_fleet_log = {
+			picture = VLT_generic_navy_fleet_log
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { navy_fleet_logistics_1 }			
+		}
+		VLT_generic_air_air_combat_trainer = {
+			picture = VLT_generic_air_air_combat_trainer
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { air_air_combat_training_2 }			
+		}
+		
+		VLT_field_medic = {
+			picture = VLT_field_medic
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { field_medic }			
+		}
+
+		VLT_military_quartermaster = {
+			picture = VLT_military_quartermaster
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { military_quartermaster }			
+		}
+
+		VLT_internal_repair = {
+			picture = VLT_internal_repair
+			allowed = {
+				original_tag = VLT
+			}
+			traits = { internal_repair }			
+		}
+
+		VLT_gun_runner = {
+			picture = gun_runner
+			allowed = {
+				original_tag = VLT
+			}				
+			traits = { gun_runner }			
+		}	
+		
+		VLT_tactically_minded = {
+			picture = VLT_tactically_minded
+			allowed = {
+				original_tag = VLT
+			}				
+			traits = { tactically_minded }			
+		}
+		
+		VLT_esoteric_engineer = {
+			picture = VLT_esoteric_engineer
+			allowed = {
+				original_tag = VLT
+			}				
+			traits = { esoteric_engineer }			
+		}
+		
+		VLT_old_soldier = {
+			picture = VLT_old_soldier
+			allowed = {
+				original_tag = VLT
+			}
+			available = {
+				has_completed_focus = vault_festus_1
+			}					
+			traits = { old_soldier }			
+		}		
+
+		VLT_ranger_instructor = {
+			picture = VLT_ranger_instructor
+			allowed = {
+				original_tag = VLT
+			}				
+			traits = { ranger_instructor }			
+		}
+
+		
+	}
+}

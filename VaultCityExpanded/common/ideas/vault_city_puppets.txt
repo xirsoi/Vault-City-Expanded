@@ -153,5 +153,66 @@ ideas = {
 				conscription = 0.05
 			}
 		}
+
+		vault_brain_source = {
+			picture = vault_open_bonus
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}
+
+		vault_brain_sink = {
+			picture = vault_open_bonus
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		vault_manpower_focus = {
+			picture = vault_open_bonus
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				MONTHLY_POPULATION = 0.1
+			}
+			cancel = { is_puppet = no }
+		}
+
+		vault_production_focus = {
+			picture = vault_open_bonus
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			cancel = { is_puppet = no }
+		}
     }
 }
