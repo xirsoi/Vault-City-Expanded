@@ -185,7 +185,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { CYC = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = CYC } # normal wargoal
+				CYC = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = CYC
@@ -587,7 +587,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { SHO = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = SHO } # normal wargoal
+				SHO = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = SHO
@@ -973,7 +973,7 @@ focus_tree = {
 			add_political_power = 30
 			if = {
 				limit = { PAL = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = PAL } # normal wargoal
+				PAL = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = PAL
@@ -1339,7 +1339,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { RIP = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = RIP } # normal wargoal
+				RIP = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = RIP
@@ -1716,7 +1716,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { YKZ = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = YKZ } # normal wargoal
+				YKZ = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = YKZ
@@ -1938,7 +1938,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { NEW = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = NEW } # normal wargoal
+				NEW = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = NEW
@@ -2164,7 +2164,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { ANT = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = ANT } # normal wargoal
+				ANT = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = ANT
@@ -2391,7 +2391,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { KLA = { exists = yes is_puppet = no } }
-				create_wargoal = { type = puppet_wargoal_focus target = KLA } # normal wargoal
+				KLA = { give_ultimatum_effect = yes }
 				else = {
 					activate_targeted_decision = {
 						target = KLA
@@ -3860,17 +3860,316 @@ focus_tree = {
 		}
 	}
 #factions
-
+  #Masters Army
+	focus = {
+		id = vault_brain_5allies
+		text = vault_brain_5allies
+		icon = GFX_goal_NEW_stirring_giants
+		cost = 8.6
+		available = {
+			OR = {
+				has_completed_focus = vault_brain_4a
+				has_completed_focus = vault_brain_4b
+			}
+			TRL = {	exists = yes }
+			OR = {
+               NEW = { exists = no }
+			   NEW = { is_puppet_of = VLT }
+            }
+		}
+		x = 15
+		y = 12
+		completion_reward = {			
+		    create_or_join_masters_new_army = yes
+			add_to_faction = TRL
+		}
+	}
+	focus = {
+		id = vault_brain_6buff
+		text = vault_brain_6buff
+		icon = GFX_goal_NEW_thradd_empire
+		cost = 8.6
+		prerequisite = {
+			focus = vault_brain_5allies
+		}
+		available = {
+			336 = { is_owned_and_controlled_by = ROOT }
+		}		
+		x = 0
+		y = 1
+		relative_position_id = vault_brain_5allies
+		completion_reward = {
+			set_technology = {
+                super_mutant_aux_infantry_tech = 1
+			}
+			336 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+	}	
+	focus = {
+		id = vault_brain_7buff
+		text = vault_brain_7buff
+		icon = GFX_goal_NEW_an_ode_rats
+		cost = 8.6
+		prerequisite = {
+			focus = vault_brain_6buff
+		}
+		available = {
+			336 = { is_owned_and_controlled_by = ROOT }
+		}		
+		x = 0
+		y = 1
+		relative_position_id = vault_brain_6buff
+		completion_reward = {
+			set_technology = {
+                super_mutant_nightkin_tech = 1
+			}
+			336 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}			
+		}
+	}
+  #Vault Federation
+	focus = {
+		id = vault_our_own_way
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8.6
+		available = {
+			OR = {
+				has_completed_focus = vault_first_4a
+				has_completed_focus = vault_first_4b
+				has_completed_focus = vault_cheif_4a
+				has_completed_focus = vault_chief_4b
+				has_completed_focus = vault_festus_4a
+				has_completed_focus = vault_festus_4b
+			}
+		}
+		mutually_exclusive = {
+			focus = vault_enemies_of_enemies
+			focus = vault_brotherhood_pact_of_steel
+			focus = vault_advancement_through_isolation
+			focus = vault_something_greater
+		}
+		x = 3
+		y = 0
+		relative_position_id = vault_brain_5allies
+		available = {
+			has_war = no
+			is_in_faction = no
+			any_other_country = {
+				is_puppet_of = ROOT
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+			}
+			create_or_join_vault_federation = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
+			}
+		}
+	}
+    focus = {
+		id = vault_all_roads_to_vault_8
+		icon = GFX_goal_generic_infrastructure
+		cost = 8.6
+		prerequisite = {
+			focus = vault_our_own_way
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_our_own_way
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = vault_infrastructure_exported days = 365 }
+			every_country = {
+				limit = {
+					is_puppet_of = PREV
+				}
+				add_timed_idea = { idea = vault_infrastructure_investment days = 365 }
+			}
+		}
+	}
+	focus = {
+		id = vault_trust
+		icon = GFX_focus_generic_self_management
+		cost = 4
+		prerequisite = {
+			focus = vault_all_roads_to_vault_8
+		}
+		mutually_exclusive = {
+			focus = vault_control
+		}
+		x = -1
+		y = 1
+		relative_position_id = vault_all_roads_to_vault_8
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			add_ideas = vault_trust
+		}
+	}
+	focus = {
+		id = vault_brain_trust
+		icon = GFX_goal_generic_advanced_technology_focus
+		cost = 8.6
+		prerequisite = {
+			focus = vault_trust
+		}
+		x = 0
+		y = 2
+		relative_position_id = vault_trust
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { idea = vault_brain_source days = 365 }
+			every_country = {
+				limit = {
+					is_puppet_of = PREV
+				}
+				add_ideas = vault_brain_sink
+			}
+		}
+	}
+	focus = {
+		id = vault_control
+		icon = GFX_goal_generic_generic_diplomatic_focus
+		cost = 4
+		prerequisite = {
+			focus = vault_all_roads_to_vault_8
+		}
+		mutually_exclusive = {
+			focus = vault_trust
+		}
+		x = 1
+		y = 1
+		relative_position_id = vault_all_roads_to_vault_8
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			add_ideas = vault_control
+		}
+	}
+	focus = {
+		id = vault_control_manpower
+		picture = GFX_focus_generic_military_mission
+		cost = 8.6
+		prerequisite = {
+			focus = vault_control
+		}
+		mutually_exclusive = {
+			focus = vault_control_production
+		}
+		x = 0
+		y = 2
+		relative_position_id = vault_control
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = PREV
+				}
+				add_ideas = vault_manpower_focus
+			}
+		}
+	}
+	focus = {
+		id = vault_control_production
+		picture = GFX_goal_generic_large_scale_normal_industry_focus
+		cost = 8.6
+		prerequisite = {
+			focus = vault_control
+		}
+		mutually_exclusive = {
+			focus = vault_control_manpower
+		}
+		x = 2
+		y = 2
+		relative_position_id = vault_control
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_puppet_of = PREV
+				}
+				add_ideas = vault_production_focus
+			}
+		}
+	}
+	focus = {
+		id = vault_modernize
+		picture = GFX_goal_generic_data_focus
+		cost = 8.6
+		prerequisite = {
+			focus = vault_control
+			focus = vault_trust
+		}
+		x = 0
+		y = 2
+		relative_position_id = vault_all_roads_to_vault_8
+		available = {
+			is_faction_leader = yes
+			any_country = {
+				is_puppet_of = PREV
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = vault_modernize_tt
+		}
+	}
   #Enclave
   	focus = {
 		id = vault_advancement_through_isolation
 		icon = GFX_goal_generic_cyborg
 		cost = 8.6
-		prerequisite = {
-			focus = vault_first_4a
-			focus = vault_first_4b
-			focus = vault_cheif_4a
-			focus = vault_chief_4b
+		available = {
+			OR = {
+				has_completed_focus = vault_first_4a
+				has_completed_focus = vault_first_4b
+				has_completed_focus = vault_cheif_4a
+				has_completed_focus = vault_chief_4b
+			}
 		}
 		mutually_exclusive = {
 			focus = vault_enemies_of_enemies
@@ -4112,16 +4411,18 @@ focus_tree = {
 		id = vault_enemies_of_enemies
 		icon = GFX_goal_generic_NCR_diplomatic_focus
 		cost = 8.6
-		prerequisite = {
-			focus = vault_first_4a
-			focus = vault_first_4b
-			focus = vault_cheif_4a
-			focus = vault_chief_4b
-			focus = vault_festus_4a
-			focus = vault_festus_4b
+		available = {
+			OR = {
+				has_completed_focus = vault_first_4a
+				has_completed_focus = vault_first_4b
+				has_completed_focus = vault_cheif_4a
+				has_completed_focus = vault_chief_4b
+				has_completed_focus = vault_festus_4a
+				has_completed_focus = vault_festus_4b
+			}
 		}
-		x = 1
-		y = 2
+		x = -2
+		y = 5
 		relative_position_id = vault_festus_3
 		mutually_exclusive = {
 			focus = vault_brotherhood_pact_of_steel
@@ -4239,11 +4540,13 @@ focus_tree = {
 		id = vault_brotherhood_pact_of_steel
 		icon = GFX_goal_BOS_common_ground_with_savages
 		cost = 8.6
-		prerequisite = {
-			focus = vault_first_4a
-			focus = vault_first_4b
-			focus = vault_cheif_4a
-			focus = vault_chief_4b
+		available = {
+			OR =  {
+				has_completed_focus = vault_first_4a
+				has_completed_focus = vault_first_4b
+				has_completed_focus = vault_cheif_4a
+				has_completed_focus = vault_chief_4b
+			}
 		}
 		mutually_exclusive = {
 			focus = vault_enemies_of_enemies
@@ -4252,7 +4555,7 @@ focus_tree = {
 			focus = vault_our_own_way
 		}
 		x = 0
-		y = 2
+		y = 5
 		relative_position_id = vault_chief_3
 		available = {
 			has_war = no
@@ -4260,6 +4563,9 @@ focus_tree = {
 			any_neighbor_country = {
 				is_western_brotherhood_of_steel_member = yes
 			}
+		}
+		bypass = {
+			is_in_faction_with = WBH
 		}
 		completion_reward = {
 			if = {
@@ -4306,7 +4612,7 @@ focus_tree = {
 			}
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = vault_first_5buff
 		completion_reward = {
 			set_technology = {
@@ -4331,7 +4637,7 @@ focus_tree = {
 			}
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = vault_first_6buff
 		completion_reward = {
 			set_technology = {
@@ -4371,13 +4677,15 @@ focus_tree = {
 		id = vault_something_greater
 		icon = GFX_goal_generic_nevada_pact
 		cost = 8.6
-		prerequisite = {
-			focus = vault_first_4a
-			focus = vault_first_4b
-			focus = vault_cheif_4a
-			focus = vault_chief_4b
-			focus = vault_festus_4a
-			focus = vault_festus_4b
+		available = {
+			OR = {
+				has_completed_focus = vault_first_4a
+				has_completed_focus = vault_first_4b
+				has_completed_focus = vault_cheif_4a
+				has_completed_focus = vault_chief_4b
+				has_completed_focus = vault_festus_4a
+				has_completed_focus = vault_festus_4b
+			}
 		}
 		mutually_exclusive = {
 			focus = vault_enemies_of_enemies
@@ -4385,8 +4693,8 @@ focus_tree = {
 			focus = vault_advancement_through_isolation
 			focus = vault_our_own_way
 		}
-		x = -1
-		y = 2
+		x = 1
+		y = 5
 		relative_position_id = vault_festus_3
 		available = {
 			has_war = no
@@ -4470,7 +4778,7 @@ focus_tree = {
 		prerequisite = {
 			focus = vault_nevada_defence_council
 		}
-		x = -2
+		x = 2
 		y = 1
 		relative_position_id = vault_nevada_defence_council
 		available = {
@@ -4525,8 +4833,10 @@ focus_tree = {
 		cost = 8.0
 		prerequisite = {
 			focus = vault_nevada_defence_council
+			focus = vault_festus_6buff
+			focus = vault_first_5buff
 		}
-		x = 2
+		x = -2
 		y = 1
 		relative_position_id = vault_nevada_defence_council
 		available = {
@@ -4583,301 +4893,7 @@ focus_tree = {
 		}
 	}
 
-  #Vault Federation
-	focus = {
-		id = vault_our_own_way
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 8.6
-		prerequisite = {
-			focus = vault_first_4a
-			focus = vault_first_4b
-			focus = vault_cheif_4a
-			focus = vault_chief_4b
-			focus = vault_festus_4a
-			focus = vault_festus_4b
-		}
-		mutually_exclusive = {
-			focus = vault_enemies_of_enemies
-			focus = vault_brotherhood_pact_of_steel
-			focus = vault_advancement_through_isolation
-			focus = vault_something_greater
-		}
-		x = 3
-		y = 0
-		relative_position_id = vault_brain_5allies
-		available = {
-			has_war = no
-			is_in_faction = no
-			any_other_country = {
-				is_puppet_of = ROOT
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
-			}
-			create_or_join_vault_federation = yes
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
-			}
-		}
-	}
-    focus = {
-		id = vault_all_roads_to_vault_8
-		icon = GFX_goal_generic_infrastructure
-		cost = 8.6
-		prerequisite = {
-			focus = vault_our_own_way
-		}
-		x = 0
-		y = 1
-		relative_position_id = vault_our_own_way
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			add_timed_idea = { idea = vault_infrastructure_exported days = 365 }
-			every_country = {
-				limit = {
-					is_puppet_of = PREV
-				}
-				add_timed_idea = { idea = vault_infrastructure_investment days = 365 }
-			}
-		}
-	}
-	focus = {
-		id = vault_trust
-		icon = GFX_focus_generic_self_management
-		cost = 4
-		prerequisite = {
-			focus = vault_all_roads_to_vault_8
-		}
-		mutually_exclusive = {
-			focus = vault_control
-		}
-		x = -1
-		y = 1
-		relative_position_id = vault_all_roads_to_vault_8
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			add_ideas = vault_trust
-		}
-	}
-	focus = {
-		id = vault_brain_trust
-		icon = GFX_goal_generic_advanced_technology_focus
-		cost = 8.6
-		prerequisite = {
-			focus = vault_trust
-		}
-		x = 0
-		y = 2
-		relative_position_id = vault_trust
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			add_timed_idea = { idea = vault_brain_source days = 365 }
-			every_country = {
-				limit = {
-					is_puppet_of = PREV
-				}
-				add_ideas = vault_brain_sink
-			}
-		}
-	}
-	focus = {
-		id = vault_control
-		icon = GFX_goal_generic_generic_diplomatic_focus
-		cost = 4
-		prerequisite = {
-			focus = vault_all_roads_to_vault_8
-		}
-		mutually_exclusive = {
-			focus = vault_trust
-		}
-		x = 1
-		y = 1
-		relative_position_id = vault_all_roads_to_vault_8
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			add_ideas = vault_control
-		}
-	}
-	focus = {
-		id = vault_control_manpower
-		picture = GFX_focus_generic_military_mission
-		cost = 8.6
-		prerequisite = {
-			focus = vault_control
-		}
-		mutually_exclusive = {
-			focus = vault_control_production
-		}
-		x = 0
-		y = 2
-		relative_position_id = vault_control
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_puppet_of = PREV
-				}
-				add_ideas = vault_manpower_focus
-			}
-		}
-	}
-	focus = {
-		id = vault_control_production
-		picture = GFX_goal_generic_large_scale_normal_industry_focus
-		cost = 8.6
-		prerequisite = {
-			focus = vault_control
-		}
-		mutually_exclusive = {
-			focus = vault_control_manpower
-		}
-		x = 2
-		y = 2
-		relative_position_id = vault_control
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_puppet_of = PREV
-				}
-				add_ideas = vault_production_focus
-			}
-		}
-	}
-	focus = {
-		id = vault_modernize
-		picture = GFX_goal_generic_data_focus
-		cost = 8.6
-		prerequisite = {
-			focus = vault_control
-			focus = vault_trust
-		}
-		x = 0
-		y = 2
-		relative_position_id = vault_all_roads_to_vault_8
-		available = {
-			is_faction_leader = yes
-			any_country = {
-				is_puppet_of = PREV
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = vault_modernize_tt
-		}
-	}
 
-  #Masters Army
-	focus = {
-		id = vault_brain_5allies
-		text = vault_brain_5allies
-		icon = GFX_goal_NEW_stirring_giants
-		cost = 8.6
-		available = {
-			OR = {
-				focus = vault_brain_4a
-				focus = vault_brain_4b
-			}
-			TRL = {	exists = yes }
-			OR = {
-               NEW = { exists = no }
-			   NEW = { is_puppet_of = VLT }
-            }
-		}
-		x = 15
-		y = 12
-		completion_reward = {			
-		    create_or_join_masters_new_army = yes
-			add_to_faction = TRL
-		}
-	}
-	focus = {
-		id = vault_brain_6buff
-		text = vault_brain_6buff
-		icon = GFX_goal_NEW_thradd_empire
-		cost = 8.6
-		prerequisite = {
-			focus = vault_brain_5allies
-		}
-		available = {
-			336 = { is_owned_and_controlled_by = ROOT }
-		}		
-		x = 0
-		y = 1
-		relative_position_id = vault_brain_5allies
-		completion_reward = {
-			set_technology = {
-                super_mutant_aux_infantry_tech = 1
-			}
-			336 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}			
-		}
-	}	
-	focus = {
-		id = vault_brain_7buff
-		text = vault_brain_7buff
-		icon = GFX_goal_NEW_an_ode_rats
-		cost = 8.6
-		prerequisite = {
-			focus = vault_brain_6buff
-		}
-		available = {
-			336 = { is_owned_and_controlled_by = ROOT }
-		}		
-		x = 0
-		y = 1
-		relative_position_id = vault_brain_6buff
-		completion_reward = {
-			set_technology = {
-                super_mutant_nightkin_tech = 1
-			}
-			336 = {
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-			}			
-		}
-	}
+
+
 }

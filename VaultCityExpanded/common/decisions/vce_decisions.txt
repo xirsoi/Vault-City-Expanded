@@ -429,3 +429,37 @@ vault_war_plans_category = {
 		}
 	}
 }
+
+vault_modernization_category = {
+	vce_modernize = {
+		icon = vaulttec
+		target_trigger = {
+			FROM = {
+				is_puppet_of = PREV
+				is_not_advanced_nation = yes
+			}
+		}
+		available = {
+			original_tag = VLT
+			has_completed_focus = vault_modernize
+			num_of_civilian_factories_available_for_projects > 4
+			FROM = {
+				has_stability > 0.6
+			}
+		}
+		cost = 150
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 5
+			stability_weekly = -0.0025
+			FROM = {
+				stability_weekly = -0.005
+			}
+		}
+		complete_effect = {
+			FROM = {
+				increase_tech_level_effect = yes
+			}
+		}
+	}
+}

@@ -23,6 +23,7 @@ is_vault_federation_member = {
 at_risk_of_war_with_from_trigger = {
   custom_trigger_tooltip = {
     tooltip = risk_of_war_tt
+    
     OR = {
       is_claimed_by = FROM
       FROM = {

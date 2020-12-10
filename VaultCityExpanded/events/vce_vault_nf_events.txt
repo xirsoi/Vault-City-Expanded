@@ -1,0 +1,59 @@
+add_namespace = nf_vault_city
+
+# VLT threatens war
+country_event = {
+    id = nf_vault_city.1
+    title = nf_vault_city.120.t
+    desc = nf_vault_city.120.d
+    fire_only_once = yes
+	is_triggered_only = yes
+    immediate = {
+		if = { #check for the Pale Folk mod and act appropriately
+			limit = {
+				country = PAL
+				OR = {
+					has_idea = idea_pal_resource_scarcity_1
+					has_idea = idea_pal_resource_scarcity_2
+					has_idea = idea_pal_resource_scarcity_3
+					has_idea = idea_pal_resource_scarcity_4
+					has_idea = idea_pal_resource_scarcity_5
+				}
+			}
+			complete_national_focus = PAL_vault_city
+		}
+		
+	}
+    option = {
+        name = nf_vault_city.120.a
+		VLT = {
+			puppet = ROOT
+		}
+    }
+    option = {
+        name = nf_vault_city.120.b
+		VLT = {
+			create_wargoal = { type = puppet_wargoal_focus target = ROOT } # normal wargoal
+			country_event = { id = nf_vault_city.121 days = 1 }
+		}
+    }
+}
+
+country_event = {
+    id = nf_vault_city.121
+    title = nf_vault_city.121.t
+    desc = nf_vault_city.121.d
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.121.a
+	}
+
+	option = {
+		name = nf_vault_city.121.b
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+	}
+}

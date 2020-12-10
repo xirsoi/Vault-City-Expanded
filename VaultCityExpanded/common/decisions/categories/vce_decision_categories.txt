@@ -27,3 +27,17 @@ vault_war_plans_category = {
 		has_country_flag = vlt_battlemind
 	}
 }
+
+vault_modernization_category = {
+	icon = GFX_decision_category_vault_tec_calling
+	priority = {
+		base = 0
+	}
+	visible = {
+		has_completed_focus = vault_modernize
+		any_country = {
+			is_puppet_of = PREV
+			is_not_advanced_nation = yes
+		}
+	}
+}

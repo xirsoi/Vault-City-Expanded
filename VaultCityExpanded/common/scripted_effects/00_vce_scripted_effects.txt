@@ -205,3 +205,67 @@ join_vault_federation = {
 		}
 	}
 }
+
+give_ultimatum_effect = {
+	country_event = { id = nf_vault_city.120 days = 1 }
+}
+
+increase_tech_level_effect = {
+	custom_effect_tooltip = increase_tech_level_tt
+	# settler to scientific
+	if = {
+		limit = {
+			is_settler_nation = yes
+		}
+		set_technology = {
+			infantry_tech_level_scientific = 1
+			support_tech_level_scientific = 1
+			special_forces_tech_level_scientific = 1
+			power_armour_tech_level_scientific = 1
+			vehicles_tech_level_scientific = 1
+			robotics_tech_level_scientific = 1
+			air_tech_level_scientific = 1
+			naval_tech_level_scientific = 1
+			tools_tech_level_scientific = 1
+			habitation_tech_level_scientific = 1
+			exploitation_tech_level_scientific = 1
+			electronics_tech_level_scientific = 1
+			scientific_civilization = 1
+		}
+	}
+
+	# tribal to settler
+	if = {
+		limit = {
+			is_tribal_nation = yes
+		}
+		set_technology = {
+			infantry_tech_level_tribal = 1
+			infantry_tech_level_settler = 1
+			support_tech_level_tribal = 1
+			support_tech_level_settler = 1
+			special_forces_tech_level_tribal = 1
+			special_forces_tech_level_settler = 1
+			vehicles_tech_level_tribal = 1
+			vehicles_tech_level_settler = 1
+			robotics_tech_level_tribal = 1
+			robotics_tech_level_settler = 1
+			air_tech_level_tribal = 1
+			air_tech_level_settler = 1
+			naval_tech_level_tribal = 1
+			naval_tech_level_settler = 1
+			tools_tech_level_tribal = 1
+			tools_tech_level_settler = 1
+			habitation_tech_level_tribal = 1
+			habitation_tech_level_settler = 1
+			exploitation_tech_level_tribal = 1
+			exploitation_tech_level_settler = 1
+			electronics_tech_level_tribal = 1
+			electronics_tech_level_settler = 1
+			tribal_civilization = 0
+			settled_civilization = 1
+		}
+		clr_country_flag = is_tribal_nation
+		set_country_flag = is_settler_nation
+	}
+}
