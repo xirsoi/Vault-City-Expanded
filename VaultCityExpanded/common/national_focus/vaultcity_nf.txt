@@ -4866,6 +4866,9 @@ focus_tree = {
 			focus = vault_new_drug_markets
 			focus = vault_vegas_vault_data
 		}
+		prerequisite = {
+			focus = vault_nevada_defence_council
+		}
 		x = 0
 		y = 2
 		relative_position_id = vault_nevada_defence_council
