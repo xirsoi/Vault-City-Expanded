@@ -214,5 +214,19 @@ ideas = {
 			}
 			cancel = { is_puppet = no }
 		}
+
+		vce_culture_shock = {
+			picture = vault_open_bonus
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -.05
+			}
+		}
     }
 }

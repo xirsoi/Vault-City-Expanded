@@ -250,7 +250,7 @@ ideas = {
 				production_speed_infrastructure_factor = -0.1
 			}
 		}
-		vault_trust = {
+		vce_trust = {
 			picture = vault_city
 			allowed = {
 				always = no
@@ -263,7 +263,7 @@ ideas = {
 				political_power_gain = 0.25
 			}
 		}
-		vault_control = {
+		vce_control = {
 			picture = vault_city
 			allowed = {
 				always = no
@@ -302,7 +302,7 @@ ideas = {
 				acclimatization_cold_climate_gain_factor = 0.05
 				acclimatization_hot_climate_gain_factor = 0.05
 			}
-			cancel = { NOT = { is_in_faction = DES } }
+			cancel = { NOT = { is_in_faction_with = DES } }
 		}
 		reno_chem_market = {
 			picture = chems_legal
@@ -413,6 +413,22 @@ ideas = {
 				tag = VEG
 				attack_bonus_against = -0.1
 				defense_bonus_against = -0.1
+			}
+		}
+
+		# vault federation
+		rejected_invitation_to_vault_federation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
 			}
 		}
     }

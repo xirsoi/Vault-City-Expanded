@@ -56,7 +56,7 @@ country_event = {
     option = {
         name = nf_vault_city.103.a
 
-        custom_tooltip = vlt_battlemind
+        custom_effect_tooltip = vlt_battlemind_tt
     }
 }
 
@@ -71,6 +71,6 @@ country_event = {
 	option = {
 		name = nf_vault_city.104.a
 
-		add_ideas = vault_city_trade
+		add_ideas = vault_city_markets
 	}
 }

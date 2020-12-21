@@ -2,15 +2,14 @@ add_namespace = nf_vault_city
 
 # VLT threatens war
 country_event = {
-    id = nf_vault_city.1
-    title = nf_vault_city.120.t
-    desc = nf_vault_city.120.d
-    fire_only_once = yes
+    id = nf_vault_city.120
+    title = nf_vault_city.120.title
+    desc = nf_vault_city.120.desc
 	is_triggered_only = yes
     immediate = {
 		if = { #check for the Pale Folk mod and act appropriately
 			limit = {
-				country = PAL
+				tag = PAL
 				OR = {
 					has_idea = idea_pal_resource_scarcity_1
 					has_idea = idea_pal_resource_scarcity_2
@@ -28,6 +27,17 @@ country_event = {
 		VLT = {
 			puppet = ROOT
 		}
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = VLT
+					ratio < 0.5
+				}
+			}
+		}
     }
     option = {
         name = nf_vault_city.120.b
@@ -35,25 +45,54 @@ country_event = {
 			create_wargoal = { type = puppet_wargoal_focus target = ROOT } # normal wargoal
 			country_event = { id = nf_vault_city.121 days = 1 }
 		}
+
+		ai_will_do = {
+			base = 80
+		}
     }
 }
 
 country_event = {
-    id = nf_vault_city.121
-    title = nf_vault_city.121.t
-    desc = nf_vault_city.121.d
-    fire_only_once = yes
+	id = nf_vault_city.121
+	title = nf_vault_city.121.title
+	desc = nf_vault_city.121.desc
 	is_triggered_only = yes
 
 	option = {
 		name = nf_vault_city.121.a
 	}
+}
+
+country_event = {
+    id = nf_vault_city.122
+    title = nf_vault_city.122.title
+    desc = nf_vault_city.122.desc
+	is_triggered_only = yes
 
 	option = {
-		name = nf_vault_city.121.b
+		name = nf_vault_city.122.a
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nf_vault_city.122.b
 		declare_war_on = {
 			target = FROM
 			type = puppet_wargoal_focus
+		}
+
+		ai_will_do = {
+			base = 80
 		}
 	}
 }

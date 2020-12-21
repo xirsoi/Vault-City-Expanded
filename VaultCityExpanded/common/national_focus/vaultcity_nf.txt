@@ -4029,7 +4029,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = vault_trust
+			add_ideas = vce_trust
 		}
 	}
 	focus = {
@@ -4078,12 +4078,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = vault_control
+			add_ideas = vce_control
 		}
 	}
 	focus = {
 		id = vault_control_manpower
-		picture = GFX_focus_generic_military_mission
+		icon = GFX_focus_generic_military_mission
 		cost = 8.6
 		prerequisite = {
 			focus = vault_control
@@ -4111,7 +4111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_control_production
-		picture = GFX_goal_generic_large_scale_normal_industry_focus
+		icon = GFX_goal_generic_large_scale_normal_industry_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_control
@@ -4139,7 +4139,7 @@ focus_tree = {
 	}
 	focus = {
 		id = vault_modernize
-		picture = GFX_goal_generic_data_focus
+		icon = GFX_goal_generic_data_focus
 		cost = 8.6
 		prerequisite = {
 			focus = vault_control
@@ -4790,8 +4790,8 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] vault_vegas_vault_data entered"
 			}
 			add_ideas = vegas_vault_data
-			NEW = {
-				country_event = nf_vault_city.101
+			VEG = {
+				country_event = nf_vault_city.104
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -4874,7 +4874,7 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_nevada_war_plans entered"
 			}
-			add_ideas = ranger_cross_training
+			set_country_flag = vlt_battlemind
 			every_country = {
 				limit = {
 					is_in_faction_with = PREV
@@ -4892,8 +4892,4 @@ focus_tree = {
 			}
 		}
 	}
-
-
-
-
 }

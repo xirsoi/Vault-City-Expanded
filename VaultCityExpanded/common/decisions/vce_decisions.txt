@@ -330,6 +330,13 @@ vault_leader_Vanilla_category = {
 vault_war_plans_category = {
 	vce_VLT_give_battlemind = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 1.5
+				political_power > 150
+			}
+		}
 		target_trigger = {
 			FROM = {
 				is_in_faction_with = PREV
@@ -346,11 +353,24 @@ vault_war_plans_category = {
 			original_tag = VLT
 			has_completed_focus = vault_nevada_war_plans
 		}
-
+		cost = 100
+		complete_effect = {
+			custom_effect_tooltip = vce.give_battlemind_tt
+			FROM = {
+				set_country_flag = vlt_battlemind
+			}
+		}
 	}
 	
 	vce_make_war_plans_VLT = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				has_war_with = FROM
+			}
+		}
 		target_trigger = {
 			at_risk_of_war_with_from_trigger = yes
 		}
@@ -371,6 +391,13 @@ vault_war_plans_category = {
 
 	vce_make_war_plans_NEW = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				has_war_with = FROM
+			}
+		}
 		target_trigger = {
 			at_risk_of_war_with_from_trigger = yes
 		}
@@ -391,6 +418,13 @@ vault_war_plans_category = {
 
 	vce_make_war_plans_DES = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				has_war_with = FROM
+			}
+		}
 		target_trigger = {
 			at_risk_of_war_with_from_trigger = yes
 		}
@@ -411,6 +445,13 @@ vault_war_plans_category = {
 
 	vce_make_war_plans_VEG = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 10
+				has_war_with = FROM
+			}
+		}
 		target_trigger = {
 			at_risk_of_war_with_from_trigger = yes
 		}
@@ -433,10 +474,26 @@ vault_war_plans_category = {
 vault_modernization_category = {
 	vce_modernize = {
 		icon = vaulttec
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				FROM = {
+					has_stability > 80
+				}
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = vault_trust
+			}
+		}
 		target_trigger = {
 			FROM = {
 				is_puppet_of = PREV
 				is_not_advanced_nation = yes
+				NOT = {
+					has_idea = vce_culture_shock
+				}
 			}
 		}
 		available = {
@@ -445,6 +502,7 @@ vault_modernization_category = {
 			num_of_civilian_factories_available_for_projects > 4
 			FROM = {
 				has_stability > 0.6
+				NOT = { has_idea = vce_culture_shock }
 			}
 		}
 		cost = 150
@@ -452,13 +510,12 @@ vault_modernization_category = {
 		modifier = {
 			civilian_factory_use = 5
 			stability_weekly = -0.0025
-			FROM = {
-				stability_weekly = -0.005
-			}
 		}
 		complete_effect = {
 			FROM = {
 				increase_tech_level_effect = yes
+				stability_factor = -0.12
+				add_timed_idea = { idea = vce_culture_shock days = 365 }
 			}
 		}
 	}
