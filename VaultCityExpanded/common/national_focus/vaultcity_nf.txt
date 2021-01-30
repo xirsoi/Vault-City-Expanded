@@ -3974,12 +3974,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel entered"
+				log = "[GetDateText]: [Root.GetName] vault_our_own_way entered"
 			}
 			create_or_join_vault_federation = yes
 			if = {
 				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] vault_brotherhood_pact_of_steel exited"
+				log = "[GetDateText]: [Root.GetName] vault_our_own_way exited"
 			}
 		}
 	}

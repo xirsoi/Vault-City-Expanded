@@ -514,7 +514,7 @@ vault_modernization_category = {
 		complete_effect = {
 			FROM = {
 				increase_tech_level_effect = yes
-				stability_factor = -0.12
+				add_stability = -0.12
 				add_timed_idea = { idea = vce_culture_shock days = 365 }
 			}
 		}

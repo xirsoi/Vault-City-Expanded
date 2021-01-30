@@ -105,7 +105,9 @@ ideas = {
 				army_morale_factor = 0.05
 				army_org_Factor = 0.05					
 			}
-		}		
+		}
+
+		#Enclave
 		Vault_Enclave1 = {
 			picture = enclave_helmet
 			allowed = {
