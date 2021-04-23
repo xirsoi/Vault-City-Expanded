@@ -7,5 +7,5 @@ tags={
 }
 path = "mod/VaultCityExpanded"
 picture="VaultCityExpanded/thumbnail.png"
-version="2.0.1"
+version="2.1.0"
 supported_version="1.10.*"

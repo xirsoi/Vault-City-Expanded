@@ -520,3 +520,136 @@ vault_modernization_category = {
 		}
 	}
 }
+
+vault_brain_category = {
+	vault_dip_cyclops = {
+
+		icon = generic_independence
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 45
+		}
+		available = {
+			has_country_flag = vault_brain
+			owns_state = 612
+		}
+		visible = {
+			has_country_flag = vault_brain
+			owns_state = 612
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_cyclops (decision) complete entered"
+			}
+			hidden_effect = {
+				load_oob = vault_cyclops_brain
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_cyclops (decision) complete exited"
+			}
+		}
+	}
+	vault_dip_pale = {
+
+		icon = generic_independence
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 45
+		}
+		available = {
+			has_country_flag = vault_brain
+			owns_state = 223
+		}
+		visible = {
+			has_country_flag = vault_brain
+			owns_state = 223
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_pale (decision) complete entered"
+			}
+			hidden_effect = {
+				load_oob = vault_flock_brain
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_pale (decision) complete exited"
+			}
+		}
+	}
+	vault_dip_yakuza = {
+
+		icon = generic_independence
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 45
+		}
+		available = {
+			has_country_flag = vault_brain
+			owns_state = 160
+		}
+		visible = {
+			has_country_flag = vault_brain
+			owns_state = 160
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_yakuza (decision) complete entered"
+			}
+			hidden_effect = {
+				load_oob = vault_yakuza_brain
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_dip_yakuza (decision) complete exited"
+			}
+		}
+	}
+}
+
+vault_city_puppet_category = {
+
+	vault_raise_flock = {
+		icon = generic_independence
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			original_tag = VLT
+			PAL = {
+				is_subject_of = VLT
+			}
+			has_war = yes
+		}
+		visible = {
+			original_tag = VLT
+			PAL = {
+				is_subject_of = VLT
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_raise_flock (decision) complete entered"
+			}
+			custom_effect_tooltip = helpflock
+			hidden_effect = {
+				load_oob = vault_flock
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] vault_raise_flock (decision) complete exited"
+			}
+		}
+	}
+}

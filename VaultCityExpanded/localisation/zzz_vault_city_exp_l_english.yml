@@ -148,6 +148,18 @@
   vault_enclave_9_desc: "The State of Nevada was once a proud member of the United States! And it shall be again! We will make this the first step in our Glorious Reclamation"
   Vault_Enclave_Remnants: "Recruit Enclave Remnants"
   Vault_Enclave_Remnants_desc: ""
+  vault_scientific_infantry: "Advanced Infantry Research"
+  vault_scientific_infantry_desc: "We've reached the conclusion of what we're capable of in terms of our infantry technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_special: "Advanced Special Forces Research"
+  vault_scientific_special_desc: "We've reached the conclusion of what we're capable of in terms of our special forces technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_armor: "Advanced Power Armor Resarch"
+  vault_scientific_armor_desc: "We've reached the conclusion of what we're capable of in terms of our power armor technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_vehicles: "Advanced Motorized Research"
+  vault_scientific_vehicles_desc: "We've reached the conclusion of what we're capable of in terms of our vehicle technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_robotics: "Advanced Robotics Research"
+  vault_scientific_robotics_desc: "We've reached the conclusion of what we're capable of in terms of our robotics technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_infantry: "Advanced Aircraft Research"
+  vault_scientific_infantry_desc: "We've reached the conclusion of what we're capable of in terms of our flight technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
 
 # actions
   ASK_TO_JOIN_vault_federation_TITLE: "Ask to join the Vault Federation"
@@ -204,6 +216,11 @@
   nf_vault_city.104.desc: "Vault City has expressed interest in the research data located in the various Vault-Tec Vaults in and around New Vegas. They propose an exchange; we give them the data and they'll open up Vault City to trade with New Vegas."
   nf_vault_city.104.a: "One time payment for ongoing benefits? Sounds good!"
   
+  nf_vault_city.119.title: "A Decision"
+  nf_vault_city.119.desc: "As we prepare to make war on [From.GetName], we can give them the opportunity to lay down their arms and accept the inevitable. This would save lives and resources on both sides, not to mention time. On the other hand, we would lose the chance to impose whatever terms we see fit. The choice is yours, [VLT.GetLeader]"
+  nf_vault_city.119.a: "Give them the chance to surrender."
+  nf_vault_city.119.b: "And lose the chance to test our forces? No way!"
+
   nf_vault_city.120.title: "[VLT.GetAdjective] Ultimatum"
   nf_vault_city.120.desc: "[VLT.GetName] has presented us with an ultimatum. They demand that we submit and accept them as overlords or they will declare war!"
   nf_vault_city.120.a: "We have no choice but to accept."
@@ -340,3 +357,5 @@
   vce_DES_war_plans_desc: "The [DES.GetName] have created an extensive strategy against this country, putting them at a disadvantage in battle. At least until they change tactics."
   vce_VEG_war_plans: "[VEG.GetAdjective] War Plans"
   vce_VEG_war_plans_desc: "[VEG.GetName] has created an extensive strategy against this country, putting them at a disadvantage in battle. At least until they change tactics."
+
+  granted_me_territory: "Gave Us Land"

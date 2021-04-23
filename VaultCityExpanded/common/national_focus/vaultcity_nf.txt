@@ -12,7 +12,7 @@ focus_tree = {
 		id = vault_ac
 		text = vault_ac
 		icon = GFX_goal_VLT_all_clear
-		cost = 1.00
+		cost = 7.00
 		x = 23
 		y = 0
 		completion_reward = {
@@ -33,7 +33,7 @@ focus_tree = {
 		id = vault_crim
 		text = vault_crim
 		icon = GFX_goal_VLT_crim
-		cost = 1.00
+		cost = 7.00
 		prerequisite = {
 			focus = vault_ac
 		}
@@ -58,7 +58,7 @@ focus_tree = {
 		id = vault_spec
 		text = vault_spec
 		icon = GFX_goal_VLT_armament
-		cost = 1.00
+		cost = 7.00
 		prerequisite = {
 			focus = vault_crim
 		}
@@ -83,7 +83,7 @@ focus_tree = {
 		id = vault_gecko
 		text = vault_gecko
 		icon = GFX_goal_VLT_gecko
-		cost = 1.00
+		cost = 7.00
 		prerequisite = {
 			focus = vault_spec
 		}
@@ -107,7 +107,7 @@ focus_tree = {
 	focus = {
 		id = vault_tribals
 		icon = GFX_goal_VLT_generic
-		cost = 1.00
+		cost = 7.00
 		prerequisite = {
 			focus = vault_gecko
 		}
@@ -130,7 +130,7 @@ focus_tree = {
 		id = vault_politics
 		text = vault_politics
 		icon = GFX_focus_generic_self_management
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_gecko
 		}
@@ -154,7 +154,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops
 		icon = GFX_goal_VLT_cyc_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_tribals
 		}
@@ -203,7 +203,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops_serve
 		icon = GFX_goal_VLT_cyc_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops
 		}
@@ -238,7 +238,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops_fort
 		icon = GFX_goal_generic_walls_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops_serve
 		}
@@ -275,7 +275,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops_eager
 		icon = GFX_goal_generic_common_firearms_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops
 		}
@@ -347,7 +347,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops_hounds
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops_eager
 		}
@@ -371,7 +371,7 @@ focus_tree = {
 	focus = {
 		id = vault_cyclops_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops_hounds
 		}
@@ -412,7 +412,7 @@ focus_tree = {
 	focus = {
 		id = vault_chemult
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops_hounds
 			focus = vault_cyclops_fort
@@ -462,7 +462,7 @@ focus_tree = {
 	focus = {
 		id = vault_chemult_core
 		icon = GFX_goal_VLT_cyc_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_chemult }
 		prerequisite = { focus = vault_cyclops_fort }
 		available = {
@@ -496,7 +496,7 @@ focus_tree = {
 	focus = {
 		id = vault_feed_cyclops
 		icon = GFX_goal_VLT_cyc_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_chemult }
 		prerequisite = { focus = vault_cyclops_leadership } 
 		available = {
@@ -521,6 +521,9 @@ focus_tree = {
 			every_state = {
 				limit = {
 					is_core_of = CHE
+					NOT = {
+						is_core_of = VLT
+					}
 				}
 				add_core_of = CYC
 				if = {
@@ -555,7 +558,7 @@ focus_tree = {
 	focus = {
 		id = vault_shoshone
 		icon = GFX_goal_VLT_shoshone_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_cyclops_hounds
 			focus = vault_cyclops_fort
@@ -604,7 +607,7 @@ focus_tree = {
 	focus = {
 		id = vault_sho_puppet
 		icon = GFX_goal_anschluss
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_shoshone
 		}
@@ -662,7 +665,7 @@ focus_tree = {
 	focus = {
 		id = vault_sho_pop
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sho_puppet
 		}
@@ -686,7 +689,7 @@ focus_tree = {
 	focus = {
 		id = vault_sho_core
 		icon = GFX_goal_VLT_shoshone_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_shoshone
 		}
@@ -721,7 +724,7 @@ focus_tree = {
 	focus = {
 		id = vault_sho_bonus
 		icon = GFX_goal_generic_airbases_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sho_core
 		}
@@ -758,7 +761,7 @@ focus_tree = {
 	focus = {
 		id = vault_sho_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sho_pop
 		}
@@ -798,7 +801,7 @@ focus_tree = {
 	focus = {
 		id = vault_dancers
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sho_pop
 			focus = vault_sho_bonus
@@ -848,7 +851,7 @@ focus_tree = {
 	focus = {
 		id = vault_dancers_core
 		icon = GFX_goal_VLT_shoshone_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_dancers }
 		prerequisite = { focus = vault_sho_bonus }
 		available = {
@@ -882,7 +885,7 @@ focus_tree = {
 	focus = {
 		id = vault_feed_sho
 		icon = GFX_goal_VLT_shoshone_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_dancers }
 		prerequisite = { focus = vault_sho_leadership }
 		available = {
@@ -907,6 +910,9 @@ focus_tree = {
 			every_state = {
 				limit = {
 					is_core_of = BDT
+					NOT = {
+						is_core_of = VLT
+					}
 				}
 				add_core_of = SHO
 				if = {
@@ -915,6 +921,11 @@ focus_tree = {
 							is_owned_and_controlled_by = ROOT
 							controller = {
 								is_puppet_of = ROOT
+								NOT = {
+									PREV = {
+										is_core_of = PREV
+									}
+								}
 							}
 						}
 						
@@ -941,7 +952,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock
 		icon = GFX_goal_VLT_flock_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_tribals
 		}
@@ -991,7 +1002,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock_annex
 		icon = GFX_goal_VLT_flock_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock
 		}
@@ -1026,7 +1037,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock_filters
 		icon = GFX_goal_generic_food_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock_annex
 		}
@@ -1063,7 +1074,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock_goggles
 		icon = GFX_goal_generic_air_doctrines_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock
 		}
@@ -1098,7 +1109,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock_diagnose
 		icon = GFX_focus_research
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock_goggles
 		}
@@ -1125,7 +1136,7 @@ focus_tree = {
 	focus = {
 		id = vault_flock_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock_diagnose
 		}
@@ -1165,7 +1176,7 @@ focus_tree = {
 	focus = {
 		id = vault_east_port
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock_diagnose
 			focus = vault_flock_filters
@@ -1215,7 +1226,7 @@ focus_tree = {
 	focus = {
 		id = vault_east_port_core
 		icon = GFX_goal_VLT_flock_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_east_port }
 		prerequisite = { focus = vault_flock_filters }
 		available = {
@@ -1249,7 +1260,7 @@ focus_tree = {
 	focus = {
 		id = vault_feed_flock
 		icon = GFX_goal_VLT_flock_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_east_port }
 		prerequisite = { focus = vault_flock_leadership }
 		available = {
@@ -1274,6 +1285,9 @@ focus_tree = {
 			every_state = {
 				limit = {
 					is_core_of = EAS
+					NOT = {
+						is_core_of = VLT
+					}
 				}
 				add_core_of = PAL
 				if = {
@@ -1307,7 +1321,7 @@ focus_tree = {
 	focus = {
 		id = vault_riperult
 		icon = GFX_goal_VLT_rip_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_flock_diagnose
 			focus = vault_flock_filters
@@ -1356,7 +1370,7 @@ focus_tree = {
 	focus = {
 		id = vault_rip_puppet
 		icon = GFX_goal_generic_generic_diplomatic_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_riperult
 		}
@@ -1414,7 +1428,7 @@ focus_tree = {
 	focus = {
 		id = vault_rip_pop
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_rip_puppet
 		}
@@ -1438,7 +1452,7 @@ focus_tree = {
 	focus = {
 		id = vault_rip_crescent
 		icon = GFX_goal_VLT_rip_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_riperult
 		}
@@ -1473,7 +1487,7 @@ focus_tree = {
 	focus = {
 		id = vault_rip_water
 		icon = GFX_goal_water_generic
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_rip_crescent
 		}
@@ -1502,7 +1516,7 @@ focus_tree = {
 	focus = {
 		id = vault_rip_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_rip_pop
 		}
@@ -1542,7 +1556,7 @@ focus_tree = {
 	focus = {
 		id = vault_ruby
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_rip_pop
 			focus = vault_rip_water
@@ -1592,7 +1606,7 @@ focus_tree = {
 	focus = {
 		id = vault_ruby_core
 		icon = GFX_goal_VLT_rip_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_ruby	}
 		prerequisite = { focus = vault_rip_water }
 		available = {
@@ -1626,7 +1640,7 @@ focus_tree = {
 	focus = {
 		id = vault_feed_rip
 		icon = GFX_goal_VLT_rip_war_dec
-		cost = 8.6
+		cost = 60.00
 		prerequisite = { focus = vault_ruby }
 		prerequisite = { focus = vault_rip_leadership }
 		available = {
@@ -1651,6 +1665,9 @@ focus_tree = {
 			every_state = {
 				limit = {
 					is_core_of = RUB
+					NOT = {
+						is_core_of = VLT
+					}
 				}
 				add_core_of = RIP
 				if = {
@@ -1685,7 +1702,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza
 		icon = GFX_goal_generic_war_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_tribals
 		}
@@ -1734,7 +1751,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza_serve
 		icon = GFX_goal_generic_position_armies
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza
 		}
@@ -1769,7 +1786,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza_fort
 		icon = GFX_goal_generic_walls_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza_serve
 		}
@@ -1805,7 +1822,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza_agents
 		icon = GFX_goal_generic_common_firearms_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza
 		}
@@ -1840,7 +1857,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza_artists
 		icon = GFX_goal_ncr_ranger_core
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza_agents
 		}
@@ -1864,7 +1881,7 @@ focus_tree = {
 	focus = {
 		id = vault_yakuza_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza_artists
 		}
@@ -1906,7 +1923,7 @@ focus_tree = {
 	focus = {
 		id = vault_reno
 		icon = GFX_goal_generic_war_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_yakuza_artists
 			focus = vault_yakuza_fort
@@ -1956,7 +1973,7 @@ focus_tree = {
 	focus = {
 		id = vault_reno_serve
 		icon = GFX_goal_anschluss
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_reno
 		}
@@ -1991,7 +2008,7 @@ focus_tree = {
 	focus = {
 		id = vault_reno_roads
 		icon = GFX_goal_generic_infrastructure
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_reno_serve
 		}
@@ -2030,7 +2047,7 @@ focus_tree = {
 	focus = {
 		id = vault_city_reno_runners
 		icon = GFX_goal_generic_common_firearms_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_reno
 		}
@@ -2067,7 +2084,7 @@ focus_tree = {
 	focus = {
 		id = vault_reno_gangs
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_city_reno_runners
 		}
@@ -2091,7 +2108,7 @@ focus_tree = {
 	focus = {
 		id = vault_reno_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_reno_gangs
 		}
@@ -2133,7 +2150,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_tribals
 		}
@@ -2182,7 +2199,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope_serve
 		icon = GFX_goal_anschluss
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope
 		}
@@ -2217,7 +2234,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope_factories
 		icon = GFX_goal_generic_large_scale_normal_industry_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope_serve
 		}
@@ -2259,7 +2276,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope_slags
 		icon = GFX_goal_water_generic
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope
 		}
@@ -2293,7 +2310,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope_militia
 		icon = GFX_goal_generic_common_firearms_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope_slags
 		}
@@ -2317,7 +2334,7 @@ focus_tree = {
 	focus = {
 		id = vault_antelope_leadership
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope_militia
 		}
@@ -2359,7 +2376,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath
 		icon = GFX_goal_generic_major_war
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_antelope_factories
 			focus = vault_antelope_militia
@@ -2409,7 +2426,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath_serve
 		icon = GFX_goal_generic_generic_diplomatic_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_klamath
 		}
@@ -2444,7 +2461,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath_river
 		icon = GFX_goal_water_generic
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_klamath_serve
 		}
@@ -2473,7 +2490,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath_den
 		icon = GFX_goal_generic_common_firearms_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_klamath
 		}
@@ -2505,7 +2522,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath_bos_outpost
 		icon = GFX_goal_BOS_vertibird_schematics
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_klamath_den
 		}
@@ -2536,7 +2553,7 @@ focus_tree = {
 	focus = {
 		id = vault_klamath_leadership
 		icon = GFX_goal_generic_generic_diplomatic_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_klamath_bos_outpost
 		}
@@ -2579,7 +2596,7 @@ focus_tree = {
 		id = vault_brain_1
 		text = vault_brain_1
 		icon = GFX_goal_NEW_an_ode_rats
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_politics
 		}
@@ -2616,7 +2633,7 @@ focus_tree = {
 		id = vault_brain_2
 		text = vault_brain_2
 		icon = GFX_goal_psyker_nullifier
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_1
 		}
@@ -2643,7 +2660,7 @@ focus_tree = {
 		id = vault_brain_3
 		text = vault_brain_3
 		icon = GFX_goal_psyker_self_management
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_2
 		}
@@ -2670,7 +2687,7 @@ focus_tree = {
 		id = vault_brain_4a
 		text = vault_brain_4a
 		icon = GFX_goal_psyker_voodoo_doll
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_3
 		}
@@ -2700,7 +2717,7 @@ focus_tree = {
 		id = vault_brain_4b
 		text = vault_brain_4b
 		icon = GFX_goal_psyker_injection
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_3
 		}
@@ -2733,7 +2750,7 @@ focus_tree = {
 		id = vault_first_1
 		text = vault_first_1
 		icon = GFX_goal_generic_ideological_fury_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_politics
 		}
@@ -2765,7 +2782,7 @@ focus_tree = {
 		id = vault_first_2
 		text = vault_first_2
 		icon = GFX_focus_research
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_1
 		}
@@ -2791,7 +2808,7 @@ focus_tree = {
 		id = vault_first_3
 		text = vault_first_3
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_2
 		}
@@ -2814,7 +2831,7 @@ focus_tree = {
 		id = vault_first_4a
 		text = vault_first_4a
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_3
 		}
@@ -2851,7 +2868,7 @@ focus_tree = {
 		id = vault_first_4b
 		text = vault_first_4b
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_3
 		}
@@ -2890,7 +2907,7 @@ focus_tree = {
 		id = vault_chief_1
 		text = vault_chief_1
 		icon = GFX_goal_rhineland
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_politics
 		}
@@ -2922,7 +2939,7 @@ focus_tree = {
 		id = vault_chief_2
 		text = vault_chief_2
 		icon = GFX_goal_generic_advanced_technology_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_chief_1
 		}
@@ -2945,7 +2962,7 @@ focus_tree = {
 		id = vault_chief_3
 		text = vault_chief_3
 		icon = GFX_goal_generic_data_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_chief_2
 		}
@@ -2971,7 +2988,7 @@ focus_tree = {
 		id = vault_cheif_4a
 		text = vault_chief_4a
 		icon = GFX_goal_generic_advanced_energy_weapons_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_chief_3
 		}
@@ -2997,7 +3014,7 @@ focus_tree = {
 		id = vault_chief_4b
 		text = vault_chief_4b
 		icon = GFX_goal_NCR_Army_of_Mobility
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_chief_3
 		}
@@ -3025,7 +3042,7 @@ focus_tree = {
 		id = vault_festus_1
 		text = vault_festus_1
 		icon = GFX_goal_generic_ghouls_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_politics
 		}
@@ -3057,7 +3074,7 @@ focus_tree = {
 		id = vault_festus_2
 		text = vault_festus_2
 		icon = GFX_goal_generic_electricity_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_festus_1
 		}
@@ -3084,7 +3101,7 @@ focus_tree = {
 		id = vault_festus_3
 		text = vault_festus_3
 		icon = GFX_goal_generic_cities_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_festus_2
 		}
@@ -3124,7 +3141,7 @@ focus_tree = {
 		id = vault_festus_4a
 		text = vault_festus_4a
 		icon = GFX_goal_support_democracy
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_festus_3
 		}
@@ -3150,7 +3167,7 @@ focus_tree = {
 		id = vault_festus_4b
 		text = vault_festus_4b
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_festus_3
 		}
@@ -3177,7 +3194,7 @@ focus_tree = {
 	focus = {
 		id = vault_utopia
 		icon = GFX_goal_generic_cities_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_gecko
 		}
@@ -3209,7 +3226,7 @@ focus_tree = {
 	focus = {
 		id = vault_med_reg
 		icon = GFX_goal_generic_ammo_boxes_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_utopia
 		}
@@ -3231,7 +3248,7 @@ focus_tree = {
 	focus = {
 		id = vault_draft
 		icon = GFX_focus_generic_little_entente
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_med_reg
 		}
@@ -3253,7 +3270,7 @@ focus_tree = {
 	focus = {
 		id = vault_mil_sec
 		icon = GFX_goal_generic_axis_build_infantry
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_draft
 		}
@@ -3275,7 +3292,7 @@ focus_tree = {
 	focus = {
 		id = vault_citizen
 		icon = GFX_focus_generic_military_mission
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_mil_sec
 		}
@@ -3297,7 +3314,7 @@ focus_tree = {
 	focus = {
 		id = vault_robo_sec
 		icon = GFX_goal_generic_robots_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_mil_sec
 		}
@@ -3330,7 +3347,7 @@ focus_tree = {
 	focus = {
 		id = vault_serv_1
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_utopia
 		}
@@ -3354,7 +3371,7 @@ focus_tree = {
 	focus = {
 		id = vault_serv_2
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_serv_1
 		}
@@ -3378,7 +3395,7 @@ focus_tree = {
 	focus = {
 		id = vault_serv_3
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_serv_2
 		}
@@ -3402,7 +3419,7 @@ focus_tree = {
 	focus = {
 		id = vault_downtown
 		icon = GFX_goal_generic_military_industry_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_utopia
 		}
@@ -3434,7 +3451,7 @@ focus_tree = {
 	focus = {
 		id = vault_courtyard
 		icon = GFX_goal_generic_large_scale_normal_industry_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_downtown
 		}
@@ -3471,7 +3488,7 @@ focus_tree = {
 	focus = {
 		id = vault_sec_station
 		icon = GFX_goal_generic_radar
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_courtyard
 		}
@@ -3515,7 +3532,7 @@ focus_tree = {
 	focus = {
 		id = vault_wall
 		icon = GFX_goal_generic_bunkers_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sec_station
 		}
@@ -3583,7 +3600,7 @@ focus_tree = {
 	focus = {
 		id = vault_second_city
 		icon = GFX_goal_generic_position_armies
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sec_station
 		}
@@ -3608,7 +3625,7 @@ focus_tree = {
 		id = vault_sec
 		text = vault_sec
 		icon = GFX_goal_generic_land_doctrines_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_gecko
 		}
@@ -3631,7 +3648,7 @@ focus_tree = {
 		id = vault_garage
 		text = vault_garage
 		icon = GFX_goal_generic_army_motorized
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sec
 		}
@@ -3659,7 +3676,7 @@ focus_tree = {
 		id = vault_arm_guard
 		text = vault_arm_guard
 		icon = GFX_goal_generic_common_energy_weapons_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sec
 		}
@@ -3687,7 +3704,7 @@ focus_tree = {
 		id = vault_robot
 		text = vault_robot
 		icon = GFX_goal_generic_production2
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_sec
 		}
@@ -3715,7 +3732,7 @@ focus_tree = {
 		id = vault_airstrip
 		text = vault_airstrip
 		icon = GFX_goal_generic_navy_carrier
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_garage
 		}
@@ -3743,7 +3760,7 @@ focus_tree = {
 		id = vault_pride_guard
 		text = vault_pride_guard
 		icon = GFX_goal_generic_recruitment_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_arm_guard
 		}
@@ -3766,7 +3783,7 @@ focus_tree = {
 	focus = {
 		id = vault_tank
 		icon = GFX_goal_generic_army_tanks
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_robot
 		}
@@ -3793,8 +3810,8 @@ focus_tree = {
 	focus = {
 		id = vault_armor_sec
 		text = vault_armor_sec
-		icon = GFX_goal_generic_t51b_power_armour_focus
-		cost = 8.6
+		icon = GFX_goal_generic_focus_vault_tec_power_armor
+		cost = 60.00
 		prerequisite = {
 			focus = vault_pride_guard
 		}
@@ -3812,17 +3829,17 @@ focus_tree = {
 				uses = 2
 				category = power_armor_tech_category
 			}
+			set_technology = { texas_brotherhood_pa_tech = 1 }
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_armor_sec exited"
 			}
 		}
 	}
-
 	focus = {
 		id = vault_gem
 		icon = GFX_goal_generic_cities_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_robo_sec
 		}
@@ -3859,13 +3876,220 @@ focus_tree = {
 			}
 		}
 	}
+
+  #Advanced Tech
+    focus = {
+		id = vault_scientific_infantry
+		icon = GFX_goal_TTM_Simulation_Training
+		cost = 60.00
+		prerequisite = { }
+		available = {
+			has_tech = unit_training_tech_6
+			OR = {
+				has_tech = melee_weaponry_tech_4
+				has_tech = basic_infantry_equipment
+				has_tech = overcharged_ammunition
+			}
+			has_completed_focus = vault_arm_guard
+			has_completed_focus = vault_mil_sec
+
+			num_of_military_factories > 5
+		}
+		x = 0
+		y = 5
+		relative_position_id = vault_sec
+		completion_reward = {
+			VLT = {
+				set_technology = { infantry_tech_level_scientific = 1 }
+			}
+		}
+	}
+    focus = {
+		id = vault_scientific_special
+		icon = GFX_goal_generic_stealth_boy_4
+		cost = 60.00
+		prerequisite = {
+			focus = vault_scientific_infantry
+		}
+		available = {
+			has_completed_focus = vault_pride_guard
+			has_tech = spec_ops_equipment_tech_4
+
+			num_of_military_factories > 7
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_scientific_infantry
+		completion_reward = {
+			VLT = {
+				set_technology = { special_forces_tech_level_scientific = 1 }
+			}
+		}
+	}
+    focus = {
+		id = vault_scientific_armor
+		icon = GFX_goal_generic_t51b_power_armour_focus
+		cost = 60.00
+		prerequisite = {
+			focus = vault_scientific_special
+		}
+		available = {
+			has_completed_focus = vault_armor_sec
+			has_tech = scav_pa_tech
+
+			num_of_military_factories > 10
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_scientific_special
+		completion_reward = {
+			VLT = {
+				set_technology = { power_armor_tech_level_scientific = 1 }
+			}
+		}
+	}
+    focus = {
+		id = vault_scientific_vehicles
+		icon = GFX_goal_generic_apc
+		cost = 60.00
+		available = {
+			has_completed_focus = vault_garage
+			OR = {
+				has_tech = apc_tech_1
+				has_tech = car_tech_2
+				has_tech = tank_tech_2
+			}
+			num_of_military_factories > 10
+		}
+		x = 0
+		y = 4
+		relative_position_id = vault_garage
+		completion_reward = {
+			VLT = {
+				set_technology = { vehicle_tech_level_scientific = 1 }
+			}
+		}
+	}
+    focus = {
+		id = vault_scientific_robotics
+		icon = GFX_goal_generic_bot_brain_head
+		cost = 60.00
+		prerequisite = { }
+		available = {
+			has_completed_focus = vault_robot
+			OR = {
+				has_tech = robot_sentrybot_tech_1
+				has_tech = robot_gutsy_tech
+			}
+
+			num_of_military_factories > 10
+		}
+		x = 0
+		y = 4
+		relative_position_id = vault_robot
+		completion_reward = {
+			VLT = {
+				set_technology = { robotics_tech_level_scientific = 1 }
+			}
+		}
+	}
+    focus = {
+		id = vault_scientific_air
+		icon = GFX_goal_generic_nuclear_fighter
+		cost = 60.00
+		available = {
+			has_completed_focus = vault_airstrip
+			has_tech = aerodynamics_tech_3
+			OR = {
+				has_tech = fighter_tech_2
+				has_tech = strat_bomber_tech_2
+				has_tech = blimp_tech_2
+				has_tech = cargo_plane_tech_2
+			}
+			num_of_military_factories > 10
+		}
+		x = 0
+		y = 1
+		relative_position_id = vault_scientific_vehicles
+		completion_reward = {
+			VLT = {
+				set_technology = { air_tech_level_scientific = 1 }
+			}
+		}
+	}
+
+#  #vault renovations
+#    focus = {
+#		id = vault_renovations1
+#		icon = GFX_goal_generic_t60_power_armour_focus
+#		cost = 60.00
+#		prerequisite = {
+#			focus = vault_gem
+#		}
+#		available = { }
+#		x = 0
+#		y = 2
+#		relative_position_id = vault_gem
+#		completion_reward = {
+#			
+#		}
+#	}
+#    focus = {
+#		id = vault_renovations2
+#		icon = GFX_goal_generic_t60_power_armour_focus
+#		cost = 60.00
+#		prerequisite = {
+#			focus = vault_renovations1
+#		}
+#		available = { }
+#		x = -1
+#		y = 1
+#		relative_position_id = vault_renovations1
+#		completion_reward = {
+#			
+#		}
+#	}
+#    focus = {
+#		id = vault_renovations3
+#		icon = GFX_goal_generic_t60_power_armour_focus
+#		cost = 60.00
+#		prerequisite = {
+#			focus = vault_renovations1
+#		}
+#		available = { }
+#		x = 1
+#		y = 1
+#		relative_position_id = vault_renovations1
+#		completion_reward = {
+#			
+#		}
+#	}
+#    focus = {
+#		id = vault_renovations4
+#		icon = GFX_goal_generic_t60_power_armour_focus
+#		cost = 60.00
+#		prerequisite = {
+#			focus = vault_renovations2
+#		}
+#		prerequisite = {
+#			focus = vault_renovations3
+#		}
+#		available = { }
+#		x = 0
+#		y = 2
+#		relative_position_id = vault_renovations1
+#		completion_reward = {
+#			
+#		}
+#	}
+
 #factions
   #Masters Army
 	focus = {
 		id = vault_brain_5allies
 		text = vault_brain_5allies
 		icon = GFX_goal_NEW_stirring_giants
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR = {
 				has_completed_focus = vault_brain_4a
@@ -3888,7 +4112,7 @@ focus_tree = {
 		id = vault_brain_6buff
 		text = vault_brain_6buff
 		icon = GFX_goal_NEW_thradd_empire
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_5allies
 		}
@@ -3916,7 +4140,7 @@ focus_tree = {
 		id = vault_brain_7buff
 		text = vault_brain_7buff
 		icon = GFX_goal_NEW_an_ode_rats
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brain_6buff
 		}
@@ -3944,7 +4168,7 @@ focus_tree = {
 	focus = {
 		id = vault_our_own_way
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR = {
 				has_completed_focus = vault_first_4a
@@ -3986,7 +4210,7 @@ focus_tree = {
     focus = {
 		id = vault_all_roads_to_vault_8
 		icon = GFX_goal_generic_infrastructure
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_our_own_way
 		}
@@ -4012,7 +4236,7 @@ focus_tree = {
 	focus = {
 		id = vault_trust
 		icon = GFX_focus_generic_self_management
-		cost = 4
+		cost = 28
 		prerequisite = {
 			focus = vault_all_roads_to_vault_8
 		}
@@ -4035,7 +4259,7 @@ focus_tree = {
 	focus = {
 		id = vault_brain_trust
 		icon = GFX_goal_generic_advanced_technology_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_trust
 		}
@@ -4061,7 +4285,7 @@ focus_tree = {
 	focus = {
 		id = vault_control
 		icon = GFX_goal_generic_generic_diplomatic_focus
-		cost = 4
+		cost = 28
 		prerequisite = {
 			focus = vault_all_roads_to_vault_8
 		}
@@ -4084,7 +4308,7 @@ focus_tree = {
 	focus = {
 		id = vault_control_manpower
 		icon = GFX_focus_generic_military_mission
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_control
 		}
@@ -4112,7 +4336,7 @@ focus_tree = {
 	focus = {
 		id = vault_control_production
 		icon = GFX_goal_generic_large_scale_normal_industry_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_control
 		}
@@ -4140,7 +4364,7 @@ focus_tree = {
 	focus = {
 		id = vault_modernize
 		icon = GFX_goal_generic_data_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_control
 			focus = vault_trust
@@ -4162,7 +4386,7 @@ focus_tree = {
   	focus = {
 		id = vault_advancement_through_isolation
 		icon = GFX_goal_generic_cyborg
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR = {
 				has_completed_focus = vault_first_4a
@@ -4212,7 +4436,7 @@ focus_tree = {
 		id = vault_enclave_5
 		text = vault_enclave_5
 		icon = GFX_goal_BOS_forbidden_secrets
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_advancement_through_isolation
 		}
@@ -4241,7 +4465,7 @@ focus_tree = {
 		id = vault_enclave_6
 		text = vault_enclave_6
 		icon = GFX_goal_NEW_new_world_old_ideas
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_enclave_5
 		}
@@ -4280,7 +4504,7 @@ focus_tree = {
 		id = vault_enclave_7
 		text = vault_enclave_7
 		icon = GFX_goal_BOS_vertibird_schematics
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_enclave_6
 		}	
@@ -4310,7 +4534,7 @@ focus_tree = {
 		id = vault_enclave_8
 		text = vault_enclave_8
 		icon = GFX_goal_NEW_new_world
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_enclave_7
 		}	
@@ -4379,7 +4603,7 @@ focus_tree = {
 		id = vault_enclave_9
 		text = vault_enclave_9
 		icon = GFX_goal_NEW_retaking_neveda
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_enclave_8
 		}	
@@ -4410,7 +4634,7 @@ focus_tree = {
 	focus = {
 		id = vault_enemies_of_enemies
 		icon = GFX_goal_generic_NCR_diplomatic_focus
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR = {
 				has_completed_focus = vault_first_4a
@@ -4453,7 +4677,7 @@ focus_tree = {
 		id = vault_festus_6buff
 		text = vault_festus_6buff
 		icon = GFX_goal_NCR_Rangers_Lead_the_War
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_enemies_of_enemies
 		}
@@ -4497,7 +4721,7 @@ focus_tree = {
 		id = vault_festus_7buff
 		text = vault_festus_7buff
 		icon = GFX_goal_NCR_Ranger_Can_Openers
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_festus_6buff
 		}		
@@ -4539,7 +4763,7 @@ focus_tree = {
 	focus = {
 		id = vault_brotherhood_pact_of_steel
 		icon = GFX_goal_BOS_common_ground_with_savages
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR =  {
 				has_completed_focus = vault_first_4a
@@ -4547,6 +4771,12 @@ focus_tree = {
 				has_completed_focus = vault_cheif_4a
 				has_completed_focus = vault_chief_4b
 			}
+			has_war = no
+			is_in_faction = no
+			WBH = {
+				exists = yes
+			}
+
 		}
 		mutually_exclusive = {
 			focus = vault_enemies_of_enemies
@@ -4557,13 +4787,6 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = vault_chief_3
-		available = {
-			has_war = no
-			is_in_faction = no
-			any_neighbor_country = {
-				is_western_brotherhood_of_steel_member = yes
-			}
-		}
 		bypass = {
 			is_in_faction_with = WBH
 		}
@@ -4583,7 +4806,7 @@ focus_tree = {
 		id = vault_first_5buff
 		text = vault_first_5buff
 		icon = GFX_goal_generic_stripped_power_armour_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_brotherhood_pact_of_steel
 		}
@@ -4600,7 +4823,7 @@ focus_tree = {
 		id = vault_first_6buff
 		text = vault_first_6buff
 		icon = GFX_goal_generic_airbases_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_5buff
 		}
@@ -4625,7 +4848,7 @@ focus_tree = {
 		id = vault_first_7buff
 		text = vault_first_7buff
 		icon = GFX_goal_BOS_vertibird_schematics
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_6buff
 		}
@@ -4650,7 +4873,7 @@ focus_tree = {
 		id = vault_first_8buff
 		text = vault_first_8buff
 		icon = GFX_goal_generic_advanced_energy_weapons_focus
-		cost = 8.6
+		cost = 60.00
 		prerequisite = {
 			focus = vault_first_7buff
 		}
@@ -4676,7 +4899,7 @@ focus_tree = {
 	focus = {
 		id = vault_something_greater
 		icon = GFX_goal_generic_nevada_pact
-		cost = 8.6
+		cost = 60.00
 		available = {
 			OR = {
 				has_completed_focus = vault_first_4a
