@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.1.1 2021-04-24
+
+General
+
+- Fixed issue where Vault City wouldn't have access to Tribal Power Armor at game start.
+- Fixed issue where the first Power Armor research focus wouldn't give Settler Power Armor.
+
 ## v2.1.0 2021-04-23
 
 General
