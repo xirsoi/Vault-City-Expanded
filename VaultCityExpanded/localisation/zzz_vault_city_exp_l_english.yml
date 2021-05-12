@@ -158,8 +158,8 @@
   vault_scientific_vehicles_desc: "We've reached the conclusion of what we're capable of in terms of our vehicle technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
   vault_scientific_robotics: "Advanced Robotics Research"
   vault_scientific_robotics_desc: "We've reached the conclusion of what we're capable of in terms of our robotics technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
-  vault_scientific_infantry: "Advanced Aircraft Research"
-  vault_scientific_infantry_desc: "We've reached the conclusion of what we're capable of in terms of our flight technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
+  vault_scientific_air: "Advanced Aircraft Research"
+  vault_scientific_air_desc: "We've reached the conclusion of what we're capable of in terms of our flight technology. We're going to need to make a total overhaul of this research division to make any more progress. For that, we require vast manufacturing resources."
 
 # actions
   ASK_TO_JOIN_vault_federation_TITLE: "Ask to join the Vault Federation"

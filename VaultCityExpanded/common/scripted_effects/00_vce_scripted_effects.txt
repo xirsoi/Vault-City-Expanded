@@ -38,8 +38,8 @@ create_or_join_vault_federation = {
 		}
 		leave_current_faction = yes
 		create_faction = VAULT_FEDERATION
-		mark_as_vault_federation_member = yes
 		set_variable = { GLOBAL.vault_federation_leader = THIS }
+		mark_as_vault_federation_member = yes
 	}
 	else_if = {
 		join_vault_federation = yes
@@ -57,7 +57,7 @@ mark_as_vault_federation_member = {
 	}
 	if = {
 		limit = { is_vault_federation_member = no }
-		set_variable = { current_faction = "VFD" }
+		set_variable = { current_faction = VLT }
 		add_vault_federation_ally_strategies = yes
 		#add_vault_federation_faction_effects = yes
 
@@ -72,7 +72,6 @@ mark_as_vault_federation_member = {
 			}
 			leave_current_faction = yes
 			join_vault_federation = yes
-			mark_as_vault_federation_member = yes
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Prev.GetName] mark_as_vault_federation_member - done also marking [This.GetName]. (scripted_effect)"

@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.1.2 2021-05-12
+
+- Fixed issue where Scientific Infantry Research focus had the Air localisation and Air didn't have one at all.
+- Fixed issue with the Vault Federation not being formed properly.
+  - An event will fire on game start to fix this issue for those already in a game.
+- Rebalanced Vault City to have a slightly less powerful starting position.
+  - Reduced starting research slots from 5 to 4.
+  - Reduced research bonus from Pre-war Medical Training from +20% to +10%.
+  - Reduced the Executions idea damage reduction to garrisons from -40% to -20%.
+  - Removed the +30 PP gain from the expansion focuses.
+
 ## v2.1.1 2021-04-24
 
 General

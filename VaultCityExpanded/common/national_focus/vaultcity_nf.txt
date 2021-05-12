@@ -193,7 +193,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_cyclops exited"
@@ -452,7 +452,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_chemult exited"
@@ -841,7 +841,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_dancers exited"
@@ -981,7 +981,7 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_flock entered"
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { PAL = { exists = yes is_puppet = no } }
 				PAL = { give_ultimatum_effect = yes }
@@ -1216,7 +1216,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_east_port exited"
@@ -1596,7 +1596,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_ruby exited"
@@ -1741,7 +1741,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_yakuza exited"
@@ -1963,7 +1963,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_yakuza exited"
@@ -2189,7 +2189,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_antelope exited"
@@ -2416,7 +2416,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
+			#add_political_power = 30
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] vault_klamath exited"

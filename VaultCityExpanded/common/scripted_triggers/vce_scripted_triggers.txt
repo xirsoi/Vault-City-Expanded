@@ -14,7 +14,7 @@ is_vault_federation_member = {
     has_variable = current_faction
     check_variable = {
       var     = current_faction
-      value   = "VFD"
+      value   = VLT
       compare = equals
     }
   }

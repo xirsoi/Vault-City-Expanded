@@ -1,0 +1,34 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            VLT = {
+                # fix Vault Federation not forming correctly
+                if = {
+                    limit = {
+                        has_completed_focus = VLT_our_own_way
+                        NOT = {
+                            is_vault_federation_member = yes
+                        }
+                    }
+                    create_or_join_vault_federation = yes
+                }
+
+                # fix VLT not having Tribal PA at start...
+                if = {
+                    limit = { NOT = { has_tech = power_armour_tech_level_tribal } }
+                    set_technology = { power_armour_tech_level_tribal = 1 }
+                }
+                # and not getting Settler PA from the research focus
+                if = {
+                    limit = {
+                        has_completed_focus = vault_armor_sec
+                        NOT = {
+                            has_tech = power_armour_tech_level_settler
+                        }
+                    }
+                    set_technology = { power_armour_tech_level_settler = 1 }
+                }
+            }
+        }
+    }
+}

@@ -68,7 +68,7 @@ set_technology = {
 
 set_stability = 0.6
 set_war_support = 0.2
-set_research_slots = 5
+set_research_slots = 4
 set_country_flag = is_vault_tec_nation
 
 set_politics = {
@@ -77,10 +77,10 @@ set_politics = {
 }
 
 set_popularities = {
-	people = 0
-	elites = 0
-	intellectuals = 100
-	ruler = 0
+	people = 15
+	elites = 20
+	intellectuals = 60
+	ruler = 5
 }
 
 add_ideas = {
